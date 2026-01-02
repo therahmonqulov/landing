@@ -50,7 +50,7 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #01143e8a; /* Qizil rang, 50% opacity */
+    background-color: #01143e8a;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     z-index: -1;
