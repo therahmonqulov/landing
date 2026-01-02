@@ -633,7 +633,7 @@ button {
 
     /*  */
     .container {
-        max-width: 1900px;
+        max-width: 1600px;
         margin: auto;
     }
 
@@ -691,7 +691,7 @@ button {
     .frist_text_text_p1 {
         padding-bottom: 30px;
         line-height: 110%;
-        font-size: clamp(1rem, 4vw, 3.5rem);
+        font-size: clamp(1rem, 4vw, 3.4rem);
         font-weight: 500;
         color: #fff;
     }
