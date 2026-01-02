@@ -656,7 +656,7 @@ button {
 
     .frist_img img {
         position: absolute;
-        width: clamp(20rem, 90vw, 53rem);
+        height: clamp(300px, 50vw, 900px);
         bottom: 0px;
         right: 0px;
     }
