@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isroil Samatov | Landing</title>
 
-    <!-- Critical images preload -->
-    <link rel="preload" href="./media/main-person.avif" as="image" fetchpriority="high">
+    <!-- Critical resources preload -->
+    <link rel="preload" href="./media/background.avif" as="image" fetchpriority="high">
     <link rel="preload" href="./media/sec-back.avif" as="image">
+    <link rel="preload" href="./media/main-person.avif" as="image" fetchpriority="high">
     <link rel="preload" href="./fonts/Inter-VariableFont_opsz,wght.ttf" as="font" type="font/ttf" crossorigin>
 
-    <!-- Critical inline CSS (LCP ni tezlashtirish uchun) -->
+    <!-- Critical inline CSS (above-the-fold + backgrounds) -->
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         @font-face {
@@ -24,8 +25,7 @@
         button { cursor: pointer; outline: none; }
         .color_yel { padding: 0px 5px; color: #FFC1B0; }
 
-        /* Hero background inline (LCP elementi!) -->
-        /* BU YERGA o‘zingizning background.avif ni base64 qilib qo‘ying yoki kichik hajmli AVIF link --> */
+        /* Hero va boshqa muhim backgroundlar inline */
         .frist {
             background: url(./media/background.avif) center/cover no-repeat;
         }
@@ -36,6 +36,7 @@
             background: url(./media/background.avif) center/cover no-repeat;
         }
 
+        /* Blur effekti saqlangan */
         .second::before {
             content: '';
             position: absolute;
@@ -47,7 +48,7 @@
         }
     </style>
 
-    <!-- Qolgan CSS async -->
+    <!-- Qolgan CSS async yuklansin -->
     <link rel="stylesheet" href="./link/style.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="./link/style.css"></noscript>
 </head>
