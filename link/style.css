@@ -563,7 +563,6 @@ button {
     }
     .frist_img img {
         position: absolute;
-        height: clamp(300px, 50vw, 900px);
         bottom: 0px;
         right: 0px;
     }
