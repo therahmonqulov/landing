@@ -1,75 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isroil Samatov | Landing</title>
 
     <!-- Critical resources preload -->
-    <link rel="preload" href="./media/background.avif" as="image">
+    <link rel="preload" href="./media/background.avif" as="image" fetchpriority="high">
     <link rel="preload" href="./media/sec-back.avif" as="image">
     <link rel="preload" href="./media/main-person.avif" as="image" fetchpriority="high">
     <link rel="preload" href="./fonts/Inter-VariableFont_opsz,wght.ttf" as="font" type="font/ttf" crossorigin>
 
-    <!-- Critical CSS inline (above-the-fold) -->
+    <!-- Critical inline CSS (above-the-fold + backgrounds) -->
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Inter", sans-serif;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         @font-face {
             font-family: "Inter";
             src: url("./fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype");
             font-weight: 600;
             font-style: normal;
+            font-display: swap;
         }
+        body, html { font-family: "Inter", sans-serif; }
+        button { cursor: pointer; outline: none; }
+        .color_yel { padding: 0px 5px; color: #FFC1B0; }
 
-        button {
-            cursor: pointer;
-            outline: none;
-        }
-
-        .color_yel {
-            padding: 0px 5px;
-            color: #FFC1B0;
-        }
-
+        /* Hero va boshqa muhim backgroundlar inline */
         .frist {
-            background-image: url(./media/background.avif);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
+            background: url(./media/background.avif) center/cover no-repeat;
         }
-
-        .third {
-            background-image: url(./media/background.avif);
-            background-position: center;
-            background-size: cover;
-        }
-
         .second {
-            background-image: url(./media/sec-back.avif);
-            background-position: center;
-            background-size: cover;
+            background: url(./media/sec-back.avif) center/cover no-repeat;
+        }
+        .third {
+            background: url(./media/background.avif) center/cover no-repeat;
+        }
+
+        /* Blur effekti saqlangan */
+        .second::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: #030238bc;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            z-index: -1;
         }
     </style>
 
-    <!-- Non-critical CSS async yuklash -->
+    <!-- Qolgan CSS async yuklansin -->
     <link rel="stylesheet" href="./link/style.css" media="print" onload="this.media='all'">
-
-    <!-- Fallback agar JS o‘chirilgan bo‘lsa -->
-    <noscript>
-        <link rel="stylesheet" href="./link/style.css">
-    </noscript>
+    <noscript><link rel="stylesheet" href="./link/style.css"></noscript>
 </head>
-
 <body>
     <!-- frist -->
-    <section class="frist " fetchpriority="high">
+    <section class="frist">
         <div class="container frist_back">
             <div class="frist_text">
                 <div class="frist_text_navbar">
@@ -90,8 +75,7 @@
                     </p>
                 </div>
                 <div class="mob-main-person">
-                    <img src="./media/main-person.avif" alt="banner" width="240" height="240" loading="eager"
-                        decoding="async" fetchpriority="high">
+                    <img src="./media/main-person.avif" alt="banner" width="240" height="240" loading="eager" decoding="async" fetchpriority="high">
                 </div>
                 <div class="frist_text_button">
                     <div class="frist_text_button_butt">
@@ -108,7 +92,7 @@
                 </div>
             </div>
             <div class="frist_img">
-                <img src="./media/main-person.avif" alt="img" loading="eager" decoding="async" fetchpriority="high">
+                <img src="./media/main-person.avif" alt="img" width="900" height="900" loading="eager" decoding="async" fetchpriority="high">
                 <div class="frist-blur-content"></div>
             </div>
         </div>
@@ -191,5 +175,4 @@
         </div>
     </section>
 </body>
-
 </html>
