@@ -622,7 +622,19 @@ button {
     }
 }
 
-@media screen and (min-width: 1100px) and (max-width: 1900px) {
+@media screen and (min-width: 1100px) and (max-width: 3000px) {
+
+    /* mobile */
+    .mob-main-person {
+        display: none;
+    }
+
+    /*  */
+    .container {
+        max-width: 1900px;
+        margin: auto;
+    }
+
     .frist {
         background-color: #01143e; 
         background-position: center;
@@ -631,6 +643,7 @@ button {
     }
 
     .frist_back {
+        padding-left: 60px;
         position: relative;
     }
 
@@ -638,115 +651,83 @@ button {
         position: relative;
     }
 
-    .mob-main-person {
-        padding: 30px 40px 0px 40px;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .mob-main-person img {
-        width: 650px;
-    }
-
-    .frist_img {
-        display: none;
-    }
-
     .frist_img img {
         position: absolute;
-        width: 1100px;
+        width: clamp(800px, 90vw, 800px);
         bottom: 0px;
         right: 0px;
     }
 
     .frist_text_navbar {
+        padding-top: 67px;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        padding-top: 30px;
-        gap: 30px;
+        align-content: center;
+        gap: 80px;
     }
 
     .frist_text_navbar_p1 {
-        text-align: center;
-        padding: 5px 10px;
+        padding: 5px 30px;
         border: 1px solid #fff;
         border-radius: 20px;
         font-weight: 500;
-        font-size: 40px;
+        font-size: 48px;
         color: #fff;
     }
 
     .frist_text_navbar_p2 {
-        text-align: center;
-        font-size: 40px;
+        font-size: 48px;
         font-weight: 500;
         color: #FFC1B0;
     }
 
     .frist_text_text {
-        padding-top: 25px;
+        width: 70%;
+        padding-top: 50px;
     }
 
     .frist_text_text_p1 {
-        padding: 0px 250px;
         padding-bottom: 30px;
-        line-height: 120%;
-        font-size: 64px;
+        line-height: 110%;
+        font-size: clamp(10px, 90vw, 58px);
         font-weight: 500;
-        text-align: center;
         color: #fff;
     }
 
     .frist_text_text_p2 {
-        padding: 10px 100px;
-        margin: 0px 50px;
-        text-align: center;
-        border-radius: 20px;
+        width: clamp(40%, 90vw, 70%);
+        padding: 5px 0px 5px 20px;
+        border-radius: 30px;
         border: 1px solid;
         color: #fff;
         font-weight: 500;
-        font-size: 54px;
-        line-height: 120%;
-
-    }
-
-    .frist_text_text_p2 br {
-        display: none;
+        font-size: 32px;
+        line-height: 110%;
     }
 
     .frist_text_button {
-        width: 100%;
-    }
-
-    .frist_text_button_butt {
-        display: flex;
-        justify-content: center;
+        margin-top: 70px;
+        width: 40%;
     }
 
     .frist_text_button button {
-        font-family: inter;
-        font-size: 74px;
+        padding: 30px 80px;
+        letter-spacing: -1px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        font-size: 45px;
         color: #000;
         border-radius: 30px;
         border: 1px solid #fff;
-        font-weight: 700;
         background-color: #FFC1B0;
-        border-radius: 50px;
-        padding: 25px 100px;
     }
 
     .frist_text_button_tex p {
-        text-align: center;
-        margin-top: 15px;
-        padding-bottom: 80px;
+        margin-top: 10px;
+        padding-bottom: 120px;
         color: #fff;
         line-height: 110%;
         font-weight: 500;
-        font-size: 44px;
+        font-size: 32px;
     }
 
     /* second */
@@ -754,73 +735,61 @@ button {
         background-position: center;
         background-size: cover;
         background-image: url(./../media/sec-back.png);
-        padding: 60px 80px;
+        padding: 40px;
     }
 
     .second_text p {
         color: #fff;
         font-weight: 700;
-        font-size: 70px;
+        font-size: 74px;
         text-align: center;
     }
 
     .second_box {
+        width: 65%;
+        margin: auto;
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         padding-top: 20px;
-        gap: 20px;
     }
 
     .second_boxes {
         position: relative;
         display: flex;
         align-items: center;
-        height: 125px;
-        padding: 0px 0px 0px 30px;
+        margin: 0px 65px 20px 0px;
+        height: 150px;
+        padding: 0px 40px;
         border-radius: 35px;
         border: 1px solid #fff;
         background-color: #01143F;
     }
 
     .second_box_num {
-        display: none;
         font-family: Arial, Helvetica, sans-serif;
         position: absolute;
-        left: -20px;
+        left: -25px;
         padding: 5px 10px;
         border: 1px solid #fff;
         border-radius: 10px;
         background-color: #FFC1B0;
         color: #000;
         font-weight: 700;
-        font-size: 25px;
+        font-size: 40px;
     }
 
     .second_box_num_mob {
-        font-family: Arial, Helvetica, sans-serif;
-        position: absolute;
-        left: -20px;
-        padding: 5px 10px;
-        border: 1px solid #fff;
-        border-radius: 10px;
-        background-color: #FFC1B0;
-        color: #000;
-        font-weight: 700;
-        font-size: 40px;
+        display: none;
     }
 
     .second_boxes p {
-        padding: 0px 40px 0px 10px;
-        font-size: 40px;
+        font-size: 34px;
         color: #fff;
-    }
-
-    .second_boxes p br {
-        display: none;
     }
 
     .second_box_last {
         display: flex;
+        justify-content: center;
     }
 
     .second_box_last_num {
@@ -833,28 +802,22 @@ button {
         background-color: #FFC1B0;
         color: #000;
         font-weight: 700;
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .second_box_last_box {
-        width: 100%;
-        margin-top: 20px;
         display: flex;
         align-items: center;
-        height: 125px;
-        padding: 0px 40px 0px 30px;
+        margin: 0px 60px 20px 0px;
+        height: 162px;
+        padding: 10px 30px;
         border-radius: 35px;
         border: 1px solid #fff;
         background-color: #01143F;
     }
 
-    .second_box_last_box br {
-        display: none;
-    }
-
     .second_box_last_box p {
-        padding: 0px 40px 0px 10px;
-        font-size: 40px;
+        font-size: 34px;
         color: #fff;
     }
 
@@ -864,7 +827,7 @@ button {
 
     /* thrid */
     .third {
-        padding: 80px 0px;
+        padding: 150px 0px;
         background-position: center;
         background-size: cover;
         background-image: url(../media/third-back.png);
@@ -874,11 +837,11 @@ button {
     }
 
     .third_text p {
-        padding-bottom: 50px;
+        padding-bottom: 120px;
         text-align: center;
         color: #fff;
         font-weight: 300;
-        font-size: 65px;
+        font-size: 70px;
     }
 
     .third_button_butt {
@@ -888,25 +851,22 @@ button {
     }
 
     .third_button_butt button {
-        padding: 10px;
-        letter-spacing: -1px;
-        font-family: inter;
-        font-size: 60px;
-        color: #000;
-        border-radius: 30px;
-        border: 1px solid #fff;
-        font-weight: 700;
-        background-color: #FFC1B0;
+        padding: 50px 160px;
+        font-size: 75px;
         border-radius: 50px;
-        padding: 25px 80px;
+        border: 1px solid #fff;
+        background: none;
+        color: #000;
+        font-weight: 500;
+        background-color: #FFC1B0;
     }
 
     .third_button_text {
-        margin-top: 20px;
+        margin-top: 40px;
     }
 
     .third_button_text p {
-        font-size: 30px;
+        font-size: 48px;
         text-align: center;
         font-weight: 300;
         color: #fff;
