@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 button {
@@ -16,26 +16,6 @@ button {
 }
 
 /* blur */
-.frist_img {
-    position: relative;
-}
-
-.frist-blur-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 100px 20px;
-
-    /* Gradient blur effekt */
-    background: linear-gradient(to top,
-            #01143eda 0%,
-            #01143e00 100%);
-
-    /* Orqa fonda blur effekt */
-    backdrop-filter: blur(0px);
-    -webkit-backdrop-filter: blur(1px);
-}
 
 .second {
     border-top: 1px solid #01143ece !important;
@@ -58,8 +38,21 @@ button {
 
 /* mob */
 @media screen and (min-width:300px) and (max-width: 760px) {
+    .second::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-colrgb(1, 20, 62)3e8a;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        z-index: -1;
+    }
+
     .frist {
-        background-color: #01143e;
+        background-image: url(../media/background.avif);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -179,7 +172,7 @@ button {
     .frist_text_button_tex p {
         text-align: center;
         margin-top: 15px;
-        padding-bottom: 80px;
+        padding-bottom: 10px;
         color: #fff;
         line-height: 110%;
         font-weight: 500;
