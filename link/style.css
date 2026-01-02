@@ -1,3 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inter;
+    font-display: swap;
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+}
+
 .color_yel {
     padding: 0px 5px;
     color: #FFC1B0;
