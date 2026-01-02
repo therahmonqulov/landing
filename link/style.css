@@ -177,7 +177,7 @@ button {
     .second {
         background-position: center;
         background-size: cover;
-        background-image: url(./../media/sec-back.png);
+        background-image: url(../media/sec-back.avif);
         padding: 30px;
     }
 
@@ -285,7 +285,7 @@ button {
         padding: 80px 0px;
         background-position: center;
         background-size: cover;
-        background-image: url(../media/third-back.png);
+        background-image: url(../media/background.avif);
         display: flex;
         justify-content: center;
         align-content: center;
@@ -462,7 +462,7 @@ button {
     .second {
         background-position: center;
         background-size: cover;
-        background-image: url(./../media/sec-back.png);
+        background-image: url(../media/sec-back.avif);
         padding: 30px 50px;
     }
 
@@ -576,7 +576,7 @@ button {
         padding: 80px 0px;
         background-position: center;
         background-size: cover;
-        background-image: url(../media/third-back.png);
+        background-image: url(../media/background.avif);
         display: flex;
         justify-content: center;
         align-content: center;
@@ -734,7 +734,7 @@ button {
     .second {
         background-position: center;
         background-size: cover;
-        background-image: url(./../media/sec-back.png);
+        background-image: url(../media/sec-back.avif);
         padding: 40px;
     }
 
@@ -830,7 +830,7 @@ button {
         padding: 150px 0px;
         background-position: center;
         background-size: cover;
-        background-image: url(../media/third-back.png);
+        background-image: url(../media/background.avif);
         display: flex;
         justify-content: center;
         align-content: center;
