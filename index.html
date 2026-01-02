@@ -14,7 +14,23 @@
         rel="stylesheet">
 
     <!-- links -->
-    <link rel="stylesheet" href="./link/style.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: inter;
+            font-display: swap;
+        }
+
+        button {
+            cursor: pointer;
+            outline: none;
+        }
+    </style>
+
+    <link rel="preload" href="./link/style.css" as="style" onload="this.rel='stylesheet'">
 
     <title>Isroil Samatov | Landing</title>
 </head>
@@ -43,7 +59,7 @@
                     </p>
                 </div>
                 <div class="mob-main-person">
-                    <img src="./media/main-person.avif" alt="">
+                    <img src="./media/main-person.avif" alt="banner" fetchpriority="high" loading="lazy">
                 </div>
                 <div class="frist_text_button">
                     <div class="frist_text_button_butt">
@@ -60,7 +76,7 @@
                 </div>
             </div>
             <div class="frist_img">
-                <img src="./media/main-person.avif" alt="img">
+                <img src="./media/main-person.avif" alt="img" fetchpriority="high" loading="lazy">
                 <div class="frist-blur-content"></div>
             </div>
         </div>

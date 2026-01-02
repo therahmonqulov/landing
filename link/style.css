@@ -1,19 +1,6 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: inter;
-    font-display: swap;
-}
-
 .color_yel {
     padding: 0px 5px;
     color: #FFC1B0;
-}
-
-button {
-    cursor: pointer;
-    outline: none;
 }
 
 /* blur */
