@@ -4,35 +4,8 @@
 }
 
 /* blur */
-.frist_img {
-    position: relative;
-}
-
-.frist-blur-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 100px 20px;
-
-    /* Gradient blur effekt */
-    background: linear-gradient(to top,
-            #01143eda 0%,
-            #01143e00 100%);
-
-    /* Orqa fonda blur effekt */
-    backdrop-filter: blur(0px);
-    -webkit-backdrop-filter: blur(1px);
-}
-
-.second {
-    border-top: 1px solid #01143ece !important;
-    backdrop-filter: blur(5px) !important;
-    -webkit-backdrop-filter: blur(100px) !important;
-}
-
 .second::before {
-     content: '';
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
