@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,26 +14,59 @@
 
     <!-- Critical CSS inline (above-the-fold) -->
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Inter", sans-serif; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+        }
+
         @font-face {
             font-family: "Inter";
             src: url("./fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype");
             font-weight: 600;
             font-style: normal;
         }
-        button { cursor: pointer; outline: none; }
-        .color_yel { padding: 0px 5px; color: #FFC1B0; }
-        .frist { background-image: url(./media/background.avif); background-position: center; background-repeat: no-repeat; background-size: cover; }
-        .third { background-image: url(./media/background.avif); background-position: center; background-size: cover; }
-        .second { background-image: url(./media/sec-back.avif); background-position: center; background-size: cover; }
+
+        button {
+            cursor: pointer;
+            outline: none;
+        }
+
+        .color_yel {
+            padding: 0px 5px;
+            color: #FFC1B0;
+        }
+
+        .frist {
+            background-image: url(./media/background.avif);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .third {
+            background-image: url(./media/background.avif);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .second {
+            background-image: url(./media/sec-back.avif);
+            background-position: center;
+            background-size: cover;
+        }
     </style>
 
     <!-- Non-critical CSS async yuklash -->
     <link rel="stylesheet" href="./link/style.css" media="print" onload="this.media='all'">
 
     <!-- Fallback agar JS o‘chirilgan bo‘lsa -->
-    <noscript><link rel="stylesheet" href="./link/style.css"></noscript>
+    <noscript>
+        <link rel="stylesheet" href="./link/style.css">
+    </noscript>
 </head>
+
 <body>
     <!-- frist -->
     <section class="frist">
@@ -56,7 +90,8 @@
                     </p>
                 </div>
                 <div class="mob-main-person">
-                    <img src="./media/main-person.avif" alt="banner" width="240" height="240" loading="eager" decoding="async" fetchpriority="high">
+                    <img src="./media/main-person.avif" alt="banner" width="240" height="240" loading="eager"
+                        decoding="async" fetchpriority="high">
                 </div>
                 <div class="frist_text_button">
                     <div class="frist_text_button_butt">
@@ -156,4 +191,5 @@
         </div>
     </section>
 </body>
+
 </html>

@@ -4,26 +4,31 @@
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
 }
+
 @font-face {
     font-family: "Inter";
     src: url("../fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype");
     font-weight: 600;
     font-style: normal;
 }
+
 button {
     cursor: pointer;
     outline: none;
 }
+
 .color_yel {
     padding: 0px 5px;
     color: #FFC1B0;
 }
+
 /* blur */
 .second {
     border-top: 1px solid #01143ece !important;
     backdrop-filter: blur(5px) !important;
     -webkit-backdrop-filter: blur(100px) !important;
 }
+
 .second::before {
     content: '';
     position: absolute;
@@ -36,6 +41,7 @@ button {
     -webkit-backdrop-filter: blur(8px);
     z-index: -1;
 }
+
 /* mob */
 @media screen and (min-width:300px) and (max-width: 760px) {
     .frist {
@@ -44,12 +50,15 @@ button {
         background-repeat: no-repeat;
         background-size: cover;
     }
+
     .frist_back {
         position: relative;
     }
+
     .frist_text {
         position: relative;
     }
+
     .mob-main-person {
         margin-top: 20px;
         height: 100%;
@@ -57,19 +66,23 @@ button {
         align-items: center;
         justify-content: center;
     }
+
     .mob-main-person img {
         width: 240px;
         height: 240px;
     }
+
     .frist_img {
         display: none;
     }
+
     .frist_img img {
         position: absolute;
         width: 1100px;
         bottom: 0px;
         right: 0px;
     }
+
     .frist_text_navbar {
         display: flex;
         justify-content: center;
@@ -78,6 +91,7 @@ button {
         padding-top: 30px;
         gap: 10px;
     }
+
     .frist_text_navbar_p1 {
         text-align: center;
         padding: 5px 10px;
@@ -87,15 +101,18 @@ button {
         font-size: 20px;
         color: #fff;
     }
+
     .frist_text_navbar_p2 {
         text-align: center;
         font-size: 20px;
         font-weight: 500;
         color: #FFC1B0;
     }
+
     .frist_text_text {
         padding-top: 15px;
     }
+
     .frist_text_text_p1 {
         padding-bottom: 10px;
         line-height: 120%;
@@ -104,6 +121,7 @@ button {
         text-align: center;
         color: #fff;
     }
+
     .frist_text_text_p2 {
         padding: 10px;
         margin: 0px 15px;
@@ -115,16 +133,20 @@ button {
         font-size: 15px;
         line-height: 120%;
     }
+
     .frist_text_text_p2 br {
         display: none;
     }
+
     .frist_text_button {
         width: 100%;
     }
+
     .frist_text_button_butt {
         display: flex;
         justify-content: center;
     }
+
     .frist_text_button button {
         margin: 0px 10px;
         width: 100%;
@@ -138,6 +160,7 @@ button {
         border-radius: 50px;
         padding: 20px 40px;
     }
+
     .frist_text_button_tex p {
         text-align: center;
         margin-top: 10px;
@@ -147,6 +170,7 @@ button {
         font-weight: 500;
         font-size: 14px;
     }
+
     /* second */
     .second {
         background-position: center;
@@ -154,18 +178,21 @@ button {
         background-image: url(../media/sec-back.avif);
         padding: 30px;
     }
+
     .second_text p {
         color: #fff;
         font-weight: 700;
         font-size: 30px;
         text-align: center;
     }
+
     .second_box {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         padding-top: 20px;
         gap: 10px;
     }
+
     .second_boxes {
         border-radius: clamp(18px, 3vw, 35px);
         position: relative;
@@ -177,6 +204,7 @@ button {
         border: 1px solid #fff;
         background-color: #01143F;
     }
+
     .second_box_num {
         display: none;
         font-family: Arial, Helvetica, sans-serif;
@@ -190,6 +218,7 @@ button {
         font-weight: 700;
         font-size: 20px;
     }
+
     .second_box_num_mob {
         font-family: Arial, Helvetica, sans-serif;
         position: absolute;
@@ -202,17 +231,21 @@ button {
         font-weight: 700;
         font-size: 20px;
     }
+
     .second_boxes p {
         font-size: (16px, 2.4vw, 40px);
         color: #fff;
     }
+
     .second_boxes p br {
         display: none;
     }
+
     .second_box_last {
         display: flex;
         justify-content: center;
     }
+
     .second_box_last_num {
         position: absolute;
         left: -20px;
@@ -225,6 +258,7 @@ button {
         font-weight: 700;
         font-size: 20px;
     }
+
     .second_box_last_box {
         width: 100%;
         border-radius: clamp(18px, 3vw, 35px);
@@ -238,13 +272,16 @@ button {
         background-color: #01143F;
         margin-top: 10px;
     }
+
     .second_box_last_box p {
         font-size: (16px, 2.4vw, 40px);
         color: #fff;
     }
+
     .second_box_last_box {
         position: relative;
     }
+
     /* thrid */
     .third {
         padding: 80px 0px;
@@ -255,6 +292,7 @@ button {
         justify-content: center;
         align-content: center;
     }
+
     .third_text p {
         padding-bottom: 50px;
         text-align: center;
@@ -262,11 +300,13 @@ button {
         font-weight: 300;
         font-size: 21px;
     }
+
     .third_button_butt {
         display: flex;
         align-items: center;
         justify-content: center;
     }
+
     .third_button_butt button {
         padding: 10px;
         letter-spacing: -1px;
@@ -279,9 +319,11 @@ button {
         border-radius: 50px;
         padding: 25px 80px;
     }
+
     .third_button_text {
         margin-top: 20px;
     }
+
     .third_button_text p {
         font-size: 20px;
         text-align: center;
@@ -289,6 +331,7 @@ button {
         color: #fff;
     }
 }
+
 @media screen and (min-width:760px) and (max-width: 1100px) {
     .frist {
         background-image: url(../media/background.avif);
@@ -296,12 +339,15 @@ button {
         background-repeat: no-repeat;
         background-size: cover;
     }
+
     .frist_back {
         position: relative;
     }
+
     .frist_text {
         position: relative;
     }
+
     .mob-main-person {
         padding: 30px 40px 0px 40px;
         height: 100%;
@@ -309,18 +355,22 @@ button {
         align-items: center;
         justify-content: center;
     }
+
     .mob-main-person img {
         width: 500px;
     }
+
     .frist_img {
         display: none;
     }
+
     .frist_img img {
         position: absolute;
         width: 1100px;
         bottom: 0px;
         right: 0px;
     }
+
     .frist_text_navbar {
         display: flex;
         justify-content: center;
@@ -329,6 +379,7 @@ button {
         padding-top: 30px;
         gap: 10px;
     }
+
     .frist_text_navbar_p1 {
         text-align: center;
         padding: 5px 10px;
@@ -338,15 +389,18 @@ button {
         font-size: 20px;
         color: #fff;
     }
+
     .frist_text_navbar_p2 {
         text-align: center;
         font-size: 20px;
         font-weight: 500;
         color: #FFC1B0;
     }
+
     .frist_text_text {
         padding-top: 25px;
     }
+
     .frist_text_text_p1 {
         padding-bottom: 30px;
         line-height: 120%;
@@ -355,6 +409,7 @@ button {
         text-align: center;
         color: #fff;
     }
+
     .frist_text_text_p2 {
         padding: 10px;
         margin: 0px 30px;
@@ -366,16 +421,20 @@ button {
         font-size: 30px;
         line-height: 120%;
     }
+
     .frist_text_text_p2 br {
         display: none;
     }
+
     .frist_text_button {
         width: 100%;
     }
+
     .frist_text_button_butt {
         display: flex;
         justify-content: center;
     }
+
     .frist_text_button button {
         font-size: 50px;
         color: #000;
@@ -386,6 +445,7 @@ button {
         border-radius: 50px;
         padding: 25px 100px;
     }
+
     .frist_text_button_tex p {
         text-align: center;
         margin-top: 15px;
@@ -395,6 +455,7 @@ button {
         font-weight: 500;
         font-size: 24px;
     }
+
     /* second */
     .second {
         background-position: center;
@@ -402,18 +463,21 @@ button {
         background-image: url(../media/sec-back.avif);
         padding: 30px 50px;
     }
+
     .second_text p {
         color: #fff;
         font-weight: 700;
         font-size: 50px;
         text-align: center;
     }
+
     .second_box {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         padding-top: 20px;
         gap: 10px;
     }
+
     .second_boxes {
         position: relative;
         display: flex;
@@ -424,6 +488,7 @@ button {
         border: 1px solid #fff;
         background-color: #01143F;
     }
+
     .second_box_num {
         display: none;
         font-family: Arial, Helvetica, sans-serif;
@@ -437,6 +502,7 @@ button {
         font-weight: 700;
         font-size: 20px;
     }
+
     .second_box_num_mob {
         font-family: Arial, Helvetica, sans-serif;
         position: absolute;
@@ -449,17 +515,21 @@ button {
         font-weight: 700;
         font-size: 20px;
     }
+
     .second_boxes p {
         padding: 0px 40px 0px 10px;
         font-size: 30px;
         color: #fff;
     }
+
     .second_boxes p br {
         display: none;
     }
+
     .second_box_last {
         display: flex;
     }
+
     .second_box_last_num {
         position: absolute;
         left: -20px;
@@ -472,6 +542,7 @@ button {
         font-weight: 700;
         font-size: 20px;
     }
+
     .second_box_last_box {
         width: 100%;
         margin-top: 10px;
@@ -483,17 +554,21 @@ button {
         border: 1px solid #fff;
         background-color: #01143F;
     }
+
     .second_box_last_box br {
         display: none;
     }
+
     .second_box_last_box p {
         padding: 0px 40px 0px 10px;
         font-size: 30px;
         color: #fff;
     }
+
     .second_box_last_box {
         position: relative;
     }
+
     /* thrid */
     .third {
         padding: 80px 0px;
@@ -504,6 +579,7 @@ button {
         justify-content: center;
         align-content: center;
     }
+
     .third_text p {
         padding-bottom: 50px;
         text-align: center;
@@ -511,11 +587,13 @@ button {
         font-weight: 300;
         font-size: 35px;
     }
+
     .third_button_butt {
         display: flex;
         align-items: center;
         justify-content: center;
     }
+
     .third_button_butt button {
         padding: 10px;
         letter-spacing: -1px;
@@ -528,9 +606,11 @@ button {
         border-radius: 50px;
         padding: 25px 80px;
     }
+
     .third_button_text {
         margin-top: 20px;
     }
+
     .third_button_text p {
         font-size: 20px;
         text-align: center;
@@ -538,41 +618,50 @@ button {
         color: #fff;
     }
 }
+
 @media screen and (min-width: 1100px) and (max-width: 3000px) {
+
     /* mobile */
     .mob-main-person {
         display: none;
     }
+
     /* */
     .container {
         max-width: 1600px;
         margin: auto;
     }
+
     .frist {
         background-image: url(../media/background.avif);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
+
     .frist_back {
         padding-left: 60px;
         position: relative;
     }
+
     .frist_text {
         position: relative;
     }
+
     .frist_img img {
         position: absolute;
         height: clamp(300px, 50vw, 900px);
         bottom: 0px;
         right: 0px;
     }
+
     .frist_text_navbar {
         padding-top: 67px;
         display: flex;
         align-content: center;
         gap: 80px;
     }
+
     .frist_text_navbar_p1 {
         padding: 5px 30px;
         border: 1px solid #fff;
@@ -581,15 +670,18 @@ button {
         font-size: 48px;
         color: #fff;
     }
+
     .frist_text_navbar_p2 {
         font-size: 48px;
         font-weight: 500;
         color: #FFC1B0;
     }
+
     .frist_text_text {
         width: 70%;
         padding-top: 50px;
     }
+
     .frist_text_text_p1 {
         padding-bottom: 30px;
         line-height: 110%;
@@ -597,6 +689,7 @@ button {
         font-weight: 500;
         color: #fff;
     }
+
     .frist_text_text_p2 {
         width: clamp(40%, 90vw, 70%);
         padding: 5px 0px 5px 20px;
@@ -607,10 +700,12 @@ button {
         font-size: 32px;
         line-height: 110%;
     }
+
     .frist_text_button {
         margin-top: 70px;
         width: 40%;
     }
+
     .frist_text_button button {
         padding: 30px 80px;
         letter-spacing: -1px;
@@ -622,6 +717,7 @@ button {
         border: 1px solid #fff;
         background-color: #FFC1B0;
     }
+
     .frist_text_button_tex p {
         margin-top: 10px;
         padding-bottom: 120px;
@@ -630,6 +726,7 @@ button {
         font-weight: 500;
         font-size: 32px;
     }
+
     /* second */
     .second {
         background-position: center;
@@ -637,12 +734,14 @@ button {
         background-image: url(../media/sec-back.avif);
         padding: 40px;
     }
+
     .second_text p {
         color: #fff;
         font-weight: 700;
         font-size: 74px;
         text-align: center;
     }
+
     .second_box {
         margin: auto;
         display: grid;
@@ -650,6 +749,7 @@ button {
         padding-top: 20px;
         margin: 0px 70px;
     }
+
     .second_boxes {
         position: relative;
         display: flex;
@@ -661,6 +761,7 @@ button {
         border: 1px solid #fff;
         background-color: #01143F;
     }
+
     .second_box_num {
         font-family: Arial, Helvetica, sans-serif;
         position: absolute;
@@ -673,17 +774,21 @@ button {
         font-weight: 700;
         font-size: 40px;
     }
+
     .second_box_num_mob {
         display: none;
     }
+
     .second_boxes p {
         font-size: clamp(1rem, 2vw, 1.5rem);
         color: #fff;
     }
+
     .second_box_last {
         display: flex;
         justify-content: center;
     }
+
     .second_box_last_num {
         position: absolute;
         left: -20px;
@@ -696,6 +801,7 @@ button {
         font-weight: 700;
         font-size: 30px;
     }
+
     .second_box_last_box {
         display: flex;
         align-items: center;
@@ -706,13 +812,16 @@ button {
         border: 1px solid #fff;
         background-color: #01143F;
     }
+
     .second_box_last_box p {
         font-size: 34px;
         color: #fff;
     }
+
     .second_box_last_box {
         position: relative;
     }
+
     /* thrid */
     .third {
         padding: 150px 0px;
@@ -723,6 +832,7 @@ button {
         justify-content: center;
         align-content: center;
     }
+
     .third_text p {
         padding-bottom: 120px;
         text-align: center;
@@ -730,11 +840,13 @@ button {
         font-weight: 300;
         font-size: 70px;
     }
+
     .third_button_butt {
         display: flex;
         align-items: center;
         justify-content: center;
     }
+
     .third_button_butt button {
         padding: 50px 160px;
         font-size: 75px;
@@ -745,9 +857,11 @@ button {
         font-weight: 500;
         background-color: #FFC1B0;
     }
+
     .third_button_text {
         margin-top: 40px;
     }
+
     .third_button_text p {
         font-size: 48px;
         text-align: center;
