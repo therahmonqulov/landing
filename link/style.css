@@ -653,7 +653,7 @@ button {
 
     .frist_img img {
         position: absolute;
-        width: clamp(800px, 90vw, 800px);
+        width: clamp(20rem, 90vw, 53rem);
         bottom: 0px;
         right: 0px;
     }
@@ -688,7 +688,7 @@ button {
     .frist_text_text_p1 {
         padding-bottom: 30px;
         line-height: 110%;
-        font-size: clamp(10px, 90vw, 58px);
+        font-size: clamp(1rem, 4vw, 3.5rem);
         font-weight: 500;
         color: #fff;
     }
@@ -746,18 +746,18 @@ button {
     }
 
     .second_box {
-        width: 65%;
         margin: auto;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         padding-top: 20px;
+        margin: 0px 70px;
     }
 
     .second_boxes {
         position: relative;
         display: flex;
         align-items: center;
-        margin: 0px 65px 20px 0px;
+        margin: 0px 0px 20px 50px;
         height: 150px;
         padding: 0px 40px;
         border-radius: 35px;
@@ -783,7 +783,7 @@ button {
     }
 
     .second_boxes p {
-        font-size: 34px;
+        font-size: clamp(1rem, 2vw, 1.5rem);
         color: #fff;
     }
 
