@@ -5,17 +5,17 @@
 }
 
 @font-face {
-  font-family: "Inter";
-  src: url("../fonts/Inter-VariableFont.woff2") format("woff2");
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Inter";
+    src: url("../fonts/Inter-VariableFont.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
 }
 
 
 body {
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-  font-display: swap
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    font-display: swap
 }
 
 
@@ -54,6 +54,7 @@ button {
 /* mob */
 @media screen and (min-width:300px) and (max-width: 760px) {
     .frist {
+        min-height: 100vh;
         background-image: url(/media/background.avif);
         background-position: center;
         background-size: cover;
