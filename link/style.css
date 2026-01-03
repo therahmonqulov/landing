@@ -47,7 +47,9 @@ button {
 /* mob */
 @media screen and (min-width:300px) and (max-width: 760px) {
     .frist {
-        background-color: #05043afa;
+        background-image: url(/media/background.avif);
+        background-position: center;
+        background-size: cover;
     }
 
     .frist_back {
