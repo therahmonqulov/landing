@@ -165,9 +165,9 @@ button {
     /* second */
     .second {
         background-position: center;
-        background-size: cover;
+        background-size: contain;
         background-image: url(../media/sec-back.avif);
-        padding: 30px;
+        padding: 15px 30px;
     }
 
     .second_text p {
@@ -279,7 +279,7 @@ button {
 
     /* thrid */
     .third {
-        padding: 80px 0px;
+        padding: 40px 0px;
         background-position: center;
         background-size: cover;
         background-image: url(../media/background.avif);
