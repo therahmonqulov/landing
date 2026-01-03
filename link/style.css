@@ -13,7 +13,6 @@
     font-display: swap;
 }
 
-
 button {
     cursor: pointer;
     outline: none;
@@ -24,8 +23,7 @@ button {
     color: #FFC1B0;
 }
 
-/* blur */
-
+/* blur (saqlangan) */
 .second {
     border-top: 1px solid #01143ece !important;
     backdrop-filter: blur(5px) !important;
@@ -45,7 +43,6 @@ button {
     z-index: -1;
 }
 
-/* mob */
 @media screen and (min-width:300px) and (max-width: 760px) {
     .frist {
         background-image: url(../media/background.avif);

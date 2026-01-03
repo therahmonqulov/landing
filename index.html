@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Preload critical images for faster LCP -->
-    <link rel="preload" href="./media/background.avif" as="image" media="(min-width: 760px)">
-    <link rel="preload" href="./media/background.avif" as="image" media="(max-width: 760px)">
+    <!-- Critical images preload (LCP uchun eng muhimlar) -->
+    <link rel="preload" href="./media/background.avif" as="image" fetchpriority="high">
+    <link rel="preload" href="./media/sec-back.avif" as="image" fetchpriority="high">
     <link rel="preload" href="./media/main-person.avif" as="image" fetchpriority="high">
-    <link rel="preload" href="./media/sec-back.avif" as="image">
 
-    <!-- links -->
+    <!-- CSS link -->
     <link rel="stylesheet" href="./link/style.css">
 
     <title>Isroil Samatov | Landing</title>
@@ -41,7 +40,8 @@
                     </p>
                 </div>
                 <div class="mob-main-person">
-                    <img src="./media/main-person.avif" alt="banner" width="300" height="290" loading="eager" fetchpriority="high">
+                    <!-- Aspect ratio saqlash uchun real dimensions (masalan, 300x290) -->
+                    <img src="./media/main-person.avif" alt="banner" width="290" height="290"  loading="eager" fetchpriority="high">
                 </div>
                 <div class="frist_text_button">
                     <div class="frist_text_button_butt">
@@ -58,7 +58,8 @@
                 </div>
             </div>
             <div class="frist_img">
-                <img src="./media/main-person.avif" alt="img" width="800" loading="eager" fetchpriority="high">
+                <!-- Desktop uchun ham dimensions qo'shildi (real rasm o'lchami taxminan 800x800 deb oldim, o'zgartiring) -->
+                <img src="./media/main-person.avif" alt="img" width="800" height="800" loading="eager" fetchpriority="high">
                 <div class="frist-blur-content"></div>
             </div>
         </div>
