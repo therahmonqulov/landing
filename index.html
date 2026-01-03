@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Preload critical images for faster LCP -->
+    <link rel="preload" href="./media/background.avif" as="image" media="(min-width: 760px)">
+    <link rel="preload" href="./media/background.avif" as="image" media="(max-width: 760px)">
+    <link rel="preload" href="./media/main-person.avif" as="image" fetchpriority="high">
+    <link rel="preload" href="./media/sec-back.avif" as="image">
+
     <!-- links -->
     <link rel="stylesheet" href="./link/style.css">
 
@@ -16,15 +22,15 @@
     <!-- frist -->
     <section class="frist">
         <div class="container frist_back">
-            <div clas s="frist_text">
+            <div class="frist_text">
                 <div class="frist_text_navbar">
                     <p class="frist_text_navbar_p1">20:00 da</p>
                     <p class="frist_text_navbar_p2">9 - 10 - yanvar</p>
                 </div>
                 <div class="frist_text_text">
-                    <p class="frist_text_text_p1">Pul jamg'arishni va har oy <span class="color_yel">$100</span> dan
+                    <p class="frist_text_text_p1">Pul jamg'arishni va har oy <span class="color_yel">$100</span> dan
                         <br>
-                        boshlab investitsiya qilib passiv
+                        boshlab investitsiya qilib passiv
                         <br>
                         daromad shakllantirishni
                         o'rganing
@@ -35,7 +41,7 @@
                     </p>
                 </div>
                 <div class="mob-main-person">
-                    <img src="./media/main-person.avif" alt="banner">
+                    <img src="./media/main-person.avif" alt="banner" width="800" height="1000" loading="eager" fetchpriority="high">
                 </div>
                 <div class="frist_text_button">
                     <div class="frist_text_button_butt">
@@ -52,7 +58,7 @@
                 </div>
             </div>
             <div class="frist_img">
-                <img src="./media/main-person.avif" alt="img">
+                <img src="./media/main-person.avif" alt="img" width="800" height="1200" loading="eager" fetchpriority="high">
                 <div class="frist-blur-content"></div>
             </div>
         </div>
@@ -121,7 +127,7 @@
     <section class="third">
         <div class="container third_box">
             <div class="third_text">
-                <p>Jonli marafonda <span style="font-weight: 700;">BEPUL</span> qatnashish <br> uchun ko'k tugmani
+                <p>Jonli marafonda <span style="font-weight: 700;">BEPUL</span> qatnashish <br> uchun ko'k tugmani
                     bosing!</p>
             </div>
             <div class="third_button">
