@@ -32,9 +32,7 @@ button {
 /* blur */
 
 .second {
-    border-top: 1px solid #01143ece !important;
     backdrop-filter: blur(5px) !important;
-    -webkit-backdrop-filter: blur(100px) !important;
 }
 
 .second::before {
@@ -56,6 +54,7 @@ button {
         background-image: url(/media/background.avif);
         background-position: center;
         background-size: cover;
+        min-height: 100vh;
     }
 
     .mob-main-person {
@@ -348,8 +347,9 @@ button {
     }
 
     .mob-main-person img {
-        width: 55%;
-        height: 100%;
+        width: 100%;
+        height: auto;
+        max-width: 300px;
     }
 
     .frist_img {
