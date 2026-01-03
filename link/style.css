@@ -54,7 +54,6 @@ button {
 /* mob */
 @media screen and (min-width:300px) and (max-width: 760px) {
     .frist {
-        min-height: 100vh;
         background-image: url(/media/background.avif);
         background-position: center;
         background-size: cover;
