@@ -45,7 +45,7 @@ button {
 
 @media screen and (min-width:300px) and (max-width: 760px) {
     .frist {
-        background-image: url(../media/background.avif);
+        background-color: #050443;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
