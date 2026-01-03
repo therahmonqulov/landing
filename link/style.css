@@ -48,9 +48,6 @@ button {
 @media screen and (min-width:300px) and (max-width: 760px) {
     .frist {
         background-color: #05043afa;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
     }
 
     .frist_back {
