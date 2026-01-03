@@ -41,7 +41,6 @@ button {
     height: 100%;
     background-color: #030238bc;
     backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
     z-index: -1;
 }
 
