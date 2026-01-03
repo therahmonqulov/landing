@@ -92,6 +92,12 @@ button {
         color: #FFC1B0;
     }
 
+    .mob-main-person img {
+        width: 100%;
+        height: auto;
+        max-width: 70%;
+    }
+
     .frist_text_text {
         padding-top: 15px;
     }
@@ -147,12 +153,12 @@ button {
 
     .frist_text_button_tex p {
         text-align: center;
-        margin-top: 10px;
+        margin: 10px 50px;
         padding-bottom: 10px;
         color: #fff;
-        line-height: 110%;
+        line-height: 1.1;
         font-weight: 500;
-        font-size: clamp(10px, 4vw, 60px);
+        font-size: clamp(12px, 3vw, 60px);
     }
 
     /* second */
@@ -346,7 +352,7 @@ button {
     .mob-main-person img {
         width: 100%;
         height: auto;
-        max-width: 430px;
+        max-width: 60%;
     }
 
     .frist_img {
@@ -437,7 +443,13 @@ button {
         border-radius: 50px;
     }
 
+    .frist_text_button_tex {
+        display: flex;
+        justify-content: center;
+    }
+
     .frist_text_button_tex p {
+        width: 50%;
         text-align: center;
         margin-top: 15px;
         padding-bottom: 20px;
