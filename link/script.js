@@ -3,10 +3,13 @@ const body = document.querySelector('body');
 
 // Formni ochish tugmalari
 const showFormButtons = document.querySelectorAll('.show_form_button');
+const blurDiv = document.querySelector(".page-blur")
+
 showFormButtons.forEach(button => {
     button.addEventListener('click', () => {
         form.style.display = 'block';
         body.style.overflow = 'hidden';
+        blurDiv.style.display = "block"
     });
 });
 
@@ -14,6 +17,7 @@ showFormButtons.forEach(button => {
 document.querySelector('.f-button').addEventListener('click', () => {
     form.style.display = 'none';
     body.style.overflow = 'auto';
+    blurDiv.style.display = "none"
 });
 
 // Custom Select (davlat tanlash)
@@ -52,7 +56,12 @@ function initializeAllCustomSelects() {
 
                 selectedText.innerHTML = `
                     <img src="./media/flags/${flagCode}.png" alt="Bayroq" style="width:24px;height:18px;margin-right:8px;">
-                    <span class="arrow"><i class="fa-solid fa-angle-down"></i></span>
+                    <span class="arrow"><svg class="icon-down" viewBox="0 0 320 512" width="20" height="20"
+                                            style="color: currentColor;">
+                                            <path fill="black" stroke="currentColor" stroke-width="0"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0L160 256.3l96.5-96.6c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.5 9.4-24.7 9.4-34.1-.1z" />
+                                        </svg></span>
                     ${code}
                 `;
 
@@ -229,7 +238,6 @@ submitForm.addEventListener('submit', async (e) => {
 
     try {
         // scriptURL ni quyida aniqlang
-        const scriptURL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec'; // O'ZGARTIRING!!!
 
         await fetch(scriptURL, {
             method: 'POST',
@@ -239,7 +247,7 @@ submitForm.addEventListener('submit', async (e) => {
         });
 
         form.style.display = 'none';
-        body.style.overflow = 'auto';
+        // body.style.overflow = 'auto';
         alert("Salom dunyo");
 
     } catch (error) {

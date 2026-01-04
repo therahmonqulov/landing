@@ -37,14 +37,6 @@ button {
 }
 
 /* form */
-input[type="text"] {
-    border: 2px solid #c9c9c9 !important;
-    background-color: #f3f7f8;
-}
-
-.phone-input {
-    border: 2px solid #c9c9c9 !important;
-}
 
 input[type="text"]:focus {
     transition: 0.3s ease;
@@ -117,9 +109,8 @@ input[type="text"]:focus {
 .select-selected .selected-text {
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
+    /* text-overflow: ellipsis; */
     padding-right: 10px;
-    /* o'qcha uchun joy */
 }
 
 .selected-text p {
@@ -148,12 +139,10 @@ input[type="text"]:focus {
     border-top: none;
     border-radius: 0 0 5px 5px;
     max-height: 200px;
-    overflow-y: auto;
+    /* overflow-y: auto; */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     z-index: 1000;
-    /* Eng yuqori qatlam – .f-button (z-index:100) dan ham ustun */
     display: none;
-    /* JS orqali ochiladi/yopiladi */
 }
 
 .select-items.select-show {
@@ -194,7 +183,7 @@ input[type="text"]:focus {
 
 .custom-select .select-option {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
     padding: 8px 12px;
     cursor: pointer;
 }
@@ -218,19 +207,10 @@ input[type="text"]:focus {
     margin-right: 10px;
     display: flex;
     align-items: center;
-    transition: transform 0.3s ease;
-    /* Yumshoq aylanish */
 }
 
-.custom-select .selected-text .arrow i {
-    font-size: 16px;
-    color: #333;
-}
-
-/* Dropdown ochilganda strelkani tepaga aylantirish */
 .custom-select .select-selected.active .arrow {
     transform: rotate(180deg);
-    /* 180 gradusga aylantirish → ↑ */
 }
 
 .custom-select .select-items {
@@ -238,7 +218,7 @@ input[type="text"]:focus {
     background: white;
     border: 1px solid #ccc;
     max-height: 200px;
-    overflow-y: auto;
+    /* overflow-y: auto; */
     z-index: 1000;
 }
 
@@ -250,96 +230,30 @@ input[type="text"]:focus {
     font-size: 14px;
 }
 
-
-
 /* mob */
-@media screen and (min-width:300px) and (max-width: 760px) {
+@media screen and (min-width:0px) and (max-width: 760px) {
+
+    .frist_text_text_p1 {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
 
     /* form */
     .custom-select .select-items {
-        width: 337px;
+        border-radius: 5px;
+        margin-top: 5px !important;
+        width: 90vw;
         position: absolute;
         background: white;
         border: 1px solid #ccc;
         max-height: 200px;
-        overflow-y: auto;
+        /* overflow-y: auto;     */
         z-index: 1000;
-    }
-
-    .frist {
-        background-image: url(/media/background.avif);
-        background-position: center;
-        background-size: cover;
-    }
-
-    .mob-main-person {
-        margin-top: 20px;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 
     .frist_img {
         display: none;
-    }
-
-    .frist_text_navbar {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        padding-top: 30px;
-        gap: 10px;
-    }
-
-    .frist_text_navbar_p1 {
-        text-align: center;
-        padding: 5px 10px;
-        border: 1px solid #fff;
-        border-radius: 20px;
-        font-weight: 500;
-        font-size: 20px;
-        color: #fff;
-    }
-
-    .frist_text_navbar_p2 {
-        text-align: center;
-        font-size: 20px;
-        font-weight: 500;
-        color: #FFC1B0;
-    }
-
-    .mob-main-person img {
-        width: 100%;
-        height: auto;
-        max-width: 70%;
-    }
-
-    .frist_text_text {
-        padding-top: 15px;
-    }
-
-    .frist_text_text_p1 {
-        padding-bottom: 10px;
-        line-height: 1.2;
-        font-size: clamp(17px, 5.4vw, 72px);
-        font-weight: 500;
-        text-align: center;
-        color: #fff;
-    }
-
-    .frist_text_text_p2 {
-        padding: 10px;
-        margin: 0px 15px;
-        text-align: center;
-        border-radius: 20px;
-        border: 1px solid;
-        color: #fff;
-        font-weight: 500;
-        font-size: clamp(13px, 4vw, 48px);
-        line-height: 1.2;
-
     }
 
     .frist_text_text_p2 br {
@@ -353,20 +267,6 @@ input[type="text"]:focus {
     .frist_text_button_butt {
         display: flex;
         justify-content: center;
-    }
-
-    .frist_text_button button {
-        width: 100%;
-        margin: 0px 5px;
-        letter-spacing: -1px;
-        font-size: clamp(16px, 7vw, 60px);
-        color: #000;
-        border-radius: 30px;
-        border: 1px solid #fff;
-        font-weight: 700;
-        background-color: #FFC1B0;
-        border-radius: 50px;
-        padding: clamp(18px, 4vw, 60px);
     }
 
     .frist_text_button_tex p {
@@ -391,7 +291,7 @@ input[type="text"]:focus {
     .second_text p {
         color: #fff;
         font-weight: 700;
-        font-size: clamp(0.1rem, 8vw, 5rem);
+        font-size: clamp(26px, 4.6vw, 72px);
         text-align: center;
     }
 
@@ -416,15 +316,6 @@ input[type="text"]:focus {
 
     .second_box_num {
         display: none;
-        position: absolute;
-        left: -20px;
-        padding: 5px 10px;
-        border: 1px solid #fff;
-        border-radius: 10px;
-        background-color: #FFC1B0;
-        color: #000;
-        font-weight: 700;
-        font-size: 20px;
     }
 
     .second_box_num_mob {
@@ -484,7 +375,7 @@ input[type="text"]:focus {
     }
 
     .second_box_last_box p {
-        font-size: (16px, 2.4vw, 40px);
+        font-size: clamp(16px, 2.4vw, 40px);
         color: #fff;
     }
 
@@ -493,7 +384,7 @@ input[type="text"]:focus {
         position: relative;
     }
 
-    /* thrid */
+    /* third */
     .third {
         padding: 80px 0px;
         background-position: center;
@@ -584,12 +475,14 @@ input[type="text"]:focus {
     }
 
     .form-h1 {
-        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .form-h1 h1 {
         text-align: center;
-        font-size: 25px;
+        font-size: 22px;
         color: #000;
         margin-top: 20px;
     }
@@ -604,7 +497,7 @@ input[type="text"]:focus {
         font-size: 16px;
         color: #000;
         margin-bottom: 10px;
-        margin-top: 30px;
+        margin-top: 20px;
     }
 
     input[type="text"] {
@@ -629,7 +522,6 @@ input[type="text"]:focus {
     .phone-input .custom-select select {
         display: none !important;
     }
-
 
     .phone-input img {
         width: 24px;
@@ -663,7 +555,7 @@ input[type="text"]:focus {
         font-weight: 700;
         border-radius: 10px;
         width: 100%;
-        padding: 20px 0px;
+        padding: 15px 0px;
         background: linear-gradient(90deg, #3757ad 0%, #517ef6 53.85%, #3757ad 100%);
         color: white;
         border: none;
@@ -676,35 +568,12 @@ input[type="text"]:focus {
 
 @media screen and (min-width:760px) and (max-width: 1100px) {
 
-    .frist {
-        background-color: #01143ffa !important;
-        background-image: url(../media/background.avif);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        min-height: 100vh;
-    }
-
     .frist_back {
         position: relative;
     }
 
     .frist_text {
         position: relative;
-    }
-
-    .mob-main-person {
-        padding: 30px 40px 0px 40px;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .mob-main-person img {
-        width: 100%;
-        height: auto;
-        max-width: 60%;
     }
 
     .frist_img {
@@ -716,83 +585,6 @@ input[type="text"]:focus {
         width: 1100px;
         bottom: 0px;
         right: 0px;
-    }
-
-    .frist_text_navbar {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        padding-top: 30px;
-        gap: 10px;
-    }
-
-    .frist_text_navbar_p1 {
-        text-align: center;
-        padding: 5px 10px;
-        border: 1px solid #fff;
-        border-radius: 20px;
-        font-weight: 500;
-        font-size: 20px;
-        color: #fff;
-    }
-
-    .frist_text_navbar_p2 {
-        text-align: center;
-        font-size: 20px;
-        font-weight: 500;
-        color: #FFC1B0;
-    }
-
-    .frist_text_text {
-        padding-top: 25px;
-    }
-
-    .frist_text_text_p1 {
-        padding-bottom: 30px;
-        line-height: 1.2;
-        font-size: clamp(17px, 5.4vw, 72px);
-        font-weight: 500;
-        text-align: center;
-        color: #fff;
-    }
-
-    .frist_text_text_p2 {
-        padding: 10px;
-        margin: 0px 30px;
-        text-align: center;
-        border-radius: 20px;
-        border: 1px solid;
-        color: #fff;
-        font-weight: 500;
-        font-size: clamp(13px, 4vw, 48px);
-        line-height: 1.2;
-
-    }
-
-    .frist_text_text_p2 br {
-        display: none;
-    }
-
-    .frist_text_button {
-        width: 100%;
-    }
-
-    .frist_text_button_butt {
-        display: flex;
-        justify-content: center;
-    }
-
-    .frist_text_button button {
-        width: 60%;
-        padding: 30px 70px;
-        font-size: clamp(2rem, 5vw, 12rem);
-        color: #000;
-        border-radius: 30px;
-        border: 1px solid #fff;
-        font-weight: 700;
-        background-color: #FFC1B0;
-        border-radius: 50px;
     }
 
     .frist_text_button_tex {
@@ -845,16 +637,6 @@ input[type="text"]:focus {
 
     .second_box_num {
         display: none;
-        font-family: Arial, Helvetica, sans-serif;
-        position: absolute;
-        left: -20px;
-        padding: 5px 10px;
-        border: 1px solid #fff;
-        border-radius: 10px;
-        background-color: #FFC1B0;
-        color: #000;
-        font-weight: 700;
-        font-size: 20px;
     }
 
     .second_box_num_mob {
@@ -916,7 +698,7 @@ input[type="text"]:focus {
         position: relative;
     }
 
-    /* thrid */
+    /* third */
     .third {
         padding: 80px 0px;
         background-position: center;
@@ -1110,15 +892,6 @@ input[type="text"]:focus {
         margin: auto;
     }
 
-    .frist {
-        background-color: #01143ffa !important;
-        background-image: url(../media/background.avif);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-
     .frist_back {
         padding-left: 60px;
         position: relative;
@@ -1135,67 +908,14 @@ input[type="text"]:focus {
         right: 0px;
     }
 
-    .frist_text_navbar {
-        padding-top: 67px;
-        display: flex;
-        align-content: center;
-        gap: 80px;
-    }
-
-    .frist_text_navbar_p1 {
-        padding: 5px 30px;
-        border: 1px solid #fff;
-        border-radius: 20px;
-        font-weight: 500;
-        font-size: 48px;
-        color: #fff;
-    }
-
-    .frist_text_navbar_p2 {
-        font-size: 48px;
-        font-weight: 500;
-        color: #FFC1B0;
-    }
-
     .frist_text_text {
         width: 70%;
         padding-top: 50px;
     }
 
-    .frist_text_text_p1 {
-        padding-bottom: 30px;
-        line-height: 110%;
-        font-size: clamp(1rem, 4vw, 3.2rem);
-        font-weight: 500;
-        color: #fff;
-    }
-
-    .frist_text_text_p2 {
-        width: clamp(40%, 90vw, 70%);
-        padding: 5px 0px 5px 20px;
-        border-radius: 30px;
-        border: 1px solid;
-        color: #fff;
-        font-weight: 500;
-        font-size: 32px;
-        line-height: 110%;
-    }
-
     .frist_text_button {
         margin-top: 70px;
         width: 40%;
-    }
-
-    .frist_text_button button {
-        padding: 30px 80px;
-        letter-spacing: -1px;
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: 600;
-        font-size: 45px;
-        color: #000;
-        border-radius: 30px;
-        border: 1px solid #fff;
-        background-color: #FFC1B0;
     }
 
     .frist_text_button_tex p {
@@ -1302,7 +1022,7 @@ input[type="text"]:focus {
         position: relative;
     }
 
-    /* thrid */
+    /* third */
     .third {
         padding: 150px 0px;
         background-position: center;
@@ -1328,13 +1048,13 @@ input[type="text"]:focus {
     }
 
     .third_button_butt button {
+        font-weight: 700;
         padding: 50px 160px;
         font-size: 75px;
         border-radius: 50px;
         border: 1px solid #fff;
         background: none;
         color: #000;
-        font-weight: 500;
         background-color: #FFC1B0;
     }
 
@@ -1364,10 +1084,17 @@ input[type="text"]:focus {
         border-radius: 10px;
         background-color: #fff;
         width: 600px;
-        box-shadow: 0px 100px 100px 3100px #000000d1;
     }
 
-
+    /* Sahifani blur qiladigan tashqi div */
+    .page-blur {
+        position: fixed;
+        inset: 0;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(10px);
+        background: rgba(0, 0, 0, 0.3);
+        display: none;
+    }
 
     .f-button {
         z-index: 100;
@@ -1417,13 +1144,18 @@ input[type="text"]:focus {
         margin-top: 25px;
     }
 
+    .phone-input {
+        border: 2px solid #c9c9c9 !important;
+    }
+
     input[type="text"] {
         width: 100%;
         padding: 15px;
-        border: 1px solid #ccc;
         border-radius: 5px;
         font-size: 17px;
         color: #000;
+        border: 2px solid #c9c9c9 !important;
+        background-color: #f3f7f8;
     }
 
     input[type="tel"] {

@@ -5,18 +5,212 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- font awsome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- Font preload -->
-    <link rel="preload" href="./fonts/Inter-VariableFont.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- CSS (non-blocking) -->
     <link rel="stylesheet" href="./link/style.css" media="print" onload="this.media='all'">
 
     <title>Isroil Samatov | Landing</title>
+
+    <!-- critical css -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+        }
+
+        button {
+            cursor: pointer;
+            outline: none;
+        }
+
+        .frist {
+            background-image: url(/media/background.avif);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .frist_text_navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 30px;
+            gap: 10px;
+        }
+
+        .frist_text_navbar_p1 {
+            text-align: center;
+            padding: 5px 10px;
+            border: 1px solid #fff;
+            border-radius: 20px;
+            font-weight: 500;
+            font-size: 20px;
+            color: #fff;
+        }
+
+        .frist_text_navbar_p2 {
+            text-align: center;
+            font-size: 20px;
+            font-weight: 500;
+            color: #FFC1B0;
+        }
+
+        .frist_text_text {
+            padding-top: 15px;
+        }
+
+        .frist_text_text_p1 {
+            font-size: clamp(17px, 5.4vw, 72px);
+            margin-bottom: 30px;
+            line-height: 1.2;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .frist_text_text_p2 {
+            padding: 10px;
+            margin: 0px 15px;
+            text-align: center;
+            border-radius: 20px;
+            border: 1px solid;
+            color: #fff;
+            font-weight: 500;
+            font-size: clamp(13px, 4vw, 48px);
+            line-height: 1.2;
+        }
+
+        .frist_text_button button {
+            width: 90%;
+            letter-spacing: -1px;
+            font-size: clamp(16px, 7vw, 60px);
+            color: #000;
+            border-radius: 30px;
+            border: 1px solid #fff;
+            font-weight: 700;
+            background-color: #FFC1B0;
+            padding: clamp(18px, 4vw, 60px);
+        }
+
+        .frist_text_button_tex p {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: #fff;
+            line-height: 1.1;
+            font-weight: 500;
+            font-size: clamp(12px, 3vw, 60px);
+        }
+
+        .mob-main-person {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mob-main-person img {
+            width: 100%;
+            height: auto;
+            max-width: 85%;
+        }
+
+        .color_yel {
+            color: #FFC1B0;
+        }
+
+        /* Tablet (760px - 1100px) */
+        @media screen and (min-width:760px) and (max-width: 1100px) {
+            .frist {
+                background-color: #01143ffa !important;
+                background-image: url(../media/background.avif);
+                min-height: 100vh;
+            }
+
+            .frist_text_navbar_p1,
+            .frist_text_navbar_p2 {
+                font-size: 20px;
+            }
+
+            .frist_text_button button {
+                width: 60%;
+                padding: 30px 70px;
+                font-size: clamp(2rem, 5vw, 12rem);
+            }
+        }
+
+        /* Desktop (1100px+) */
+        @media screen and (min-width: 1100px) {
+
+            .frist {
+                background-color: #01143ffa !important;
+                background-image: url(../media/background.avif);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .mob-main-person {
+                display: none;
+            }
+
+            .frist_text_navbar {
+                padding-top: 67px;
+                justify-content: flex-start;
+                display: flex;
+                gap: 80px;
+            }
+
+            .frist_text_navbar_p1 {
+                padding: 5px 30px;
+                font-size: 48px;
+            }
+
+            .frist_text_navbar_p2 {
+                font-size: 48px;
+            }
+
+            .frist_text_text {
+                width: 70%;
+                padding-top: 50px;
+            }
+
+            .frist_text_text_p1 {
+                font-size: clamp(1rem, 4vw, 3.4rem);
+                line-height: 110%;
+            }
+
+            .frist_text_text_p2 {
+                width: clamp(40%, 90vw, 70%);
+                padding: 5px 0px 5px 20px;
+                font-size: 32px;
+            }
+
+            .frist_text_button {
+                margin-top: 70px;
+                width: 40%;
+            }
+
+            .frist_text_button button {
+                padding: 30px 80px;
+                font-size: 45px;
+            }
+
+            .frist_text_button_tex p {
+                font-size: 32px;
+                padding-bottom: 120px;
+            }
+
+            .frist_img img {
+                position: absolute;
+                height: clamp(300px, 60vw, 800px);
+                bottom: 0px;
+                right: 0px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -143,8 +337,9 @@
     </section>
 
     <!-- form -->
+    <div class="page-blur"></div>
     <div class="form">
-        <button class="f-button"><i class="fa-solid fa-x"></i></button>
+        <button class="f-button">X</button>
         <div class="form-container">
             <div class="form-h1">
                 <h1>
@@ -163,66 +358,71 @@
                                 <p class="selected-text">
                                     <img id="flag" src="./media/flags/uz.png" alt="Bayroq">
                                     <span class="arrow">
-                                        <i class="fa-solid fa-angle-down"></i>
+                                        <svg class="icon-down" viewBox="0 0 320 512" width="20" height="20"
+                                            style="color: currentColor;">
+                                            <path fill="black" stroke="currentColor" stroke-width="0"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0L160 256.3l96.5-96.6c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.5 9.4-24.7 9.4-34.1-.1z" />
+                                        </svg>
                                     </span>
-                                    (+998)
+                                    +998
                                 </p>
                             </div>
                             <div class="select-items select-hide">
                                 <div data-value="UZ" data-maxlength="12" data-code="+998" data-flag="uz"
                                     class="select-option selected">
-                                    <img src="./media/flags/uz.png" alt="UZ" class="flag-icon">
-                                    (+998)
+                                    <p>O'zbekistan</p>
+                                    +998
                                 </div>
                                 <div data-value="KRZ" data-maxlength="11" data-code="+996" data-flag="kg"
                                     class="select-option">
-                                    <img src="./media/flags/kg.png" alt="KG" class="flag-icon">
-                                    (+996)
+                                    <p>Qirg'iziston</p>
+                                    +996
                                 </div>
                                 <div data-value="TJK" data-maxlength="11" data-code="+992" data-flag="tj"
                                     class="select-option">
-                                    <img src="./media/flags/tj.png" alt="TJ" class="flag-icon">
-                                    (+992)
+                                    <p>Tojikiston</p>
+                                    +992
                                 </div>
                                 <div data-value="TK" data-maxlength="11" data-code="+993" data-flag="tm"
                                     class="select-option">
-                                    <img src="./media/flags/tm.png" alt="TM" class="flag-icon">
-                                    (+993)
+                                    <p>Turkmaniston</p>
+                                    +993
                                 </div>
                                 <div data-value="KZ" data-maxlength="12" data-code="+7" data-flag="kz"
                                     class="select-option">
-                                    <img src="./media/flags/kz.png" alt="KZ" class="flag-icon">
-                                    (+7)
+                                    <p>Qozoqiston</p>
+                                    +7
                                 </div>
                                 <div data-value="RU" data-maxlength="13" data-code="+7" data-flag="ru"
                                     class="select-option">
-                                    <img src="./media/flags/ru.png" alt="RU" class="flag-icon">
-                                    (+7)
+                                    <p>Rossiya</p>
+                                    +7
                                 </div>
                                 <div data-value="GER" data-maxlength="12" data-code="+49" data-flag="de"
                                     class="select-option">
-                                    <img src="./media/flags/de.png" alt="DE" class="flag-icon">
-                                    (+49)
+                                    <p>Germaniya</p>
+                                    +49
                                 </div>
                                 <div data-value="TUR" data-maxlength="11" data-code="+90" data-flag="tr"
                                     class="select-option">
-                                    <img src="./media/flags/tr.png" alt="TR" class="flag-icon">
-                                    (+90)
+                                    <p>Turkiya</p>
+                                    +90
                                 </div>
                                 <div data-value="BEL" data-maxlength="12" data-code="+375" data-flag="by"
                                     class="select-option">
-                                    <img src="./media/flags/by.png" alt="BY" class="flag-icon">
-                                    (+375)
+                                    <p>Bellarusiya</p>
+                                    +375
                                 </div>
                                 <div data-value="UKI" data-maxlength="12" data-code="+380" data-flag="ua"
                                     class="select-option">
-                                    <img src="./media/flags/ua.png" alt="UA" class="flag-icon">
-                                    (+380)
+                                    <p>Angliya</p>
+                                    +380
                                 </div>
                                 <div data-value="US" data-maxlength="12" data-code="+1" data-flag="us"
                                     class="select-option">
-                                    <img src="./media/flags/us.png" alt="US" class="flag-icon">
-                                    (+1)
+                                    <p>AQSH</p>
+                                    +1
                                 </div>
                             </div>
                         </div>
