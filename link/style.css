@@ -634,6 +634,7 @@ input[type="text"]:focus {
     }
 
     .phone-input input {
+        font-size: 16px;
         border: none;
         outline: none;
         flex: 1;
