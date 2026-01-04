@@ -108,6 +108,10 @@ input[type="text"]:focus {
     /* o'qcha uchun joy */
 }
 
+.selected-text p {
+    font-size: 25px !important;
+}
+
 .select-arrow {
     width: 12px;
     height: 8px;
@@ -967,13 +971,13 @@ input[type="text"]:focus {
     }
 
     .f-button {
-        font-weight: 300;
+        z-index: 100;
         color: #fff;
         outline: none;
         border: none;
         outline: none;
         background: none;
-        padding: 0px 20px;
+        padding: 0px 15px;
         text-align: right;
         background-color: #000;
         width: 100%;
@@ -981,10 +985,10 @@ input[type="text"]:focus {
         display: flex;
         justify-content: right;
         align-items: center;
-        font-size: 20px;
     }
 
     .f-button i {
+        font-size: 13px;
         color: #fff;
     }
 
@@ -1031,14 +1035,10 @@ input[type="text"]:focus {
         margin: 2px 0px;
     }
 
-    .phone-input {
-        display: flex;
-        align-items: center;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        overflow: hidden;
-        padding: 5px;
+    .phone-input .custom-select select {
+        display: none !important;
     }
+
 
     .phone-input img {
         width: 24px;
@@ -1061,6 +1061,7 @@ input[type="text"]:focus {
     }
 
     .phone-input input {
+        font-size: 16px;
         border: none;
         outline: none;
         flex: 1;
