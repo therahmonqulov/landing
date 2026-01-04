@@ -25,30 +25,35 @@
                     <p class="frist_text_navbar_p2">9 - 10 - yanvar</p>
                 </div>
                 <div class="frist_text_text">
-                    <p class="frist_text_text_p1">Pul jamg'arishni va har oy <span class="color_yel">$100</span> dan <br>
+                    <p class="frist_text_text_p1">Pul jamg'arishni va har oy <span class="color_yel">$100</span> dan
+                        <br>
                         boshlab investitsiya qilib passiv <br>
                         daromad shakllantirishni o'rganing
                     </p>
                     <p class="frist_text_text_p2">
-                        Bepul master-klassda <span class="color_yel">$10,000</span> va <br> <span class="color_yel">$50,000</span> lik kapital shakllantirishni o'rganasiz
+                        Bepul master-klassda <span class="color_yel">$10,000</span> va <br> <span
+                            class="color_yel">$50,000</span> lik kapital shakllantirishni o'rganasiz
                     </p>
                 </div>
                 <div class="mob-main-person">
-                    <img src="./media/main-person.avif" alt="Isroil Samatov" width="250" height="250" loading="eager" fetchpriority="high">
+                    <img src="./media/main-person.avif" alt="Isroil Samatov" width="250" height="250" loading="eager"
+                        fetchpriority="high">
                 </div>
                 <div class="frist_text_button">
                     <div class="frist_text_button_butt">
-                        <button>Bepul qo‘shilish</button>
+                        <button class="show_form_button">Bepul qo‘shilish</button>
                     </div>
                     <div class="frist_text_button_tex">
                         <p>
-                            Bu webinarda pulni yo‘qotishni <br> to‘xtatib, kapitalga aylantirishni eng <br> oson va ishonchli usulini o’rganasiz.
+                            Bu webinarda pulni yo‘qotishni <br> to‘xtatib, kapitalga aylantirishni eng <br> oson va
+                            ishonchli usulini o’rganasiz.
                         </p>
                     </div>
                 </div>
             </div>
             <div class="frist_img">
-                <img src="./media/main-person.avif" alt="Isroil Samatov" loading="eager" fetchpriority="high" width="850" height="750">
+                <img src="./media/main-person.avif" alt="Isroil Samatov" loading="eager" fetchpriority="high"
+                    width="850" height="750">
             </div>
         </div>
     </section>
@@ -116,11 +121,12 @@
     <section class="third">
         <div class="container third_box">
             <div class="third_text">
-                <p>Jonli marafonda <span style="font-weight: 700;">BEPUL</span> qatnashish <br> uchun ko'k tugmani bosing!</p>
+                <p>Jonli marafonda <span style="font-weight: 700;">BEPUL</span> qatnashish <br> uchun ko'k tugmani
+                    bosing!</p>
             </div>
             <div class="third_button">
                 <div class="third_button_butt">
-                    <button>Bepul qo‘shilish</button>
+                    <button class="show_form_button">Bepul qo‘shilish</button>
                 </div>
                 <div class="third_button_text">
                     <p>
@@ -131,6 +137,68 @@
         </div>
     </section>
 
+    <!-- form -->
+    <div class="form">
+        <button class="f-button">x</button>
+        <div class="form-container">
+            <div class="form-h1">
+                <h1>
+                    Ro'yxatdan o'tish uchun ma'lumotlaringizni kiriting!
+                </h1>
+            </div>
+            <form id="form" name="contact-form" novalidate>
+                <div class="hide-form-div">
+                    <label for="name">Ismingiz:</label>
+                    <input type="text" id="name" name="name" placeholder="Ismingizni kiriting">
+                    <label for="phone">Telefon raqamingiz:</label>
+                    <div class="phone-input">
+                        <img id="flag" src="./media/flags/uz.png" alt="Bayroq">
+                        <select id="country" onchange="updateFlag()">
+                            <option value="UZ" data-maxlength="12">
+                                (+998) O'zbekistan
+                            </option>
+                            <option value="KRZ" data-maxlength="11">
+                                (+996) Qirg'iziston
+                            </option>
+                            <option value="TJK" data-maxlength="11">
+                                (+992) Tojikiston
+                            </option>
+                            <option value="TK" data-maxlength="11">
+                                (+993) Turkmaniston
+                            </option>
+                            <option value="KZ" data-maxlength="12">
+                                (+7) Qozoqiston
+                            </option>
+                            <option value="RU" data-maxlength="13">
+                                (+7) Rossiya
+                            </option>
+                            <option value="GER" data-maxlength="12">
+                                (+49) Germaniya
+                            </option>
+                            <option value="TUR" data-maxlength="11">
+                                (+90) Turkiya
+                            </option>
+                            <option value="BEL" data-maxlength="12">
+                                (+375) Belarussiya
+                            </option>
+                            <option value="UKI" data-maxlength="12">
+                                (+380) Ukraina
+                            </option>
+                            <option value="US" data-maxlength="12">
+                                (+1) AQSH
+                            </option>
+                        </select>
+                        <input type="tel" id="phone" name="phone" placeholder="99-999-99-99"
+                            pattern="\d{2}-\d{3}-\d{2}-\d{2}" maxlength="12">
+                    </div>
+                    <p class="warning-p">❌ Telefon raqam mos emas!</p>
+                    <button type="submit" class="submit-button">DAVOM ETISH</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./link/script.js"></script>
 </body>
 
 </html>
