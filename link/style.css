@@ -647,7 +647,7 @@ button {
 
     .frist_img img {
         position: absolute;
-        height: clamp(300px, 50vw, 900px);
+        height: clamp(300px, 60vw, 800px);
         bottom: 0px;
         right: 0px;
     }
@@ -682,7 +682,7 @@ button {
     .frist_text_text_p1 {
         padding-bottom: 30px;
         line-height: 110%;
-        font-size: clamp(1rem, 4vw, 3.4rem);
+        font-size: clamp(1rem, 4vw, 3.3rem);
         font-weight: 500;
         color: #fff;
     }
