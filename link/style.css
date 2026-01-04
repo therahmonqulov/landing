@@ -953,92 +953,92 @@ input[type="text"]:focus {
 
     /* form */
     .form-container {
-        width: 90%;
+        width: 80%;
         margin: auto;
     }
 
     .form {
         display: none;
         position: fixed;
-        top: 0%;
-        right: 50%;
-        transform: translate(50%, 0%);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 10px;
         background-color: #fff;
-        height: 100vh;
-        width: 100vw;
-        z-index: 1;
-        box-shadow: 0px 0px 10px 1000px #000000e2;
+        width: 600px;
+        box-shadow: 0px 100px 100px 800px #000000d1;
     }
 
     .f-button {
         z-index: 100;
-        color: #fff;
-        outline: none;
+        position: absolute;
+        top: 10px;
+        right: 0px;
+        border-top-right-radius: 10px;
+        font-size: 18px;
         border: none;
         outline: none;
         background: none;
-        padding: 0px 15px;
+        padding: 10px 20px;
         text-align: right;
-        background-color: #000;
-        width: 100%;
-        height: 40px;
-        display: flex;
-        justify-content: right;
-        align-items: center;
     }
 
     .f-button i {
-        font-size: 13px;
-        color: #fff;
+        color: #000;
+    }
+
+    .f-button:hover {
+        cursor: pointer;
     }
 
     .form-h1 {
-        width: 100%;
+        width: 90%;
+        margin: auto;
+        display: flex;
+        align-self: center;
     }
 
-    .form-h1 h1 {
+    .form h1 {
         text-align: center;
-        font-size: 25px;
-        color: #000;
-        margin-top: 20px;
+        font-size: 30px;
+        margin-top: 25px;
+        color: #333;
     }
 
     .form-group {
-        margin-bottom: 25px;
-        text-align: left;
+        margin-bottom: 30px;
     }
 
     .form label {
         display: block;
-        font-size: 16px;
+        font-size: 19px;
         color: #000;
         margin-bottom: 10px;
-        margin-top: 30px;
+        margin-top: 25px;
     }
 
     input[type="text"] {
         width: 100%;
-        padding: 15px 10px;
+        padding: 15px;
         border: 1px solid #ccc;
         border-radius: 5px;
-        font-size: 16px;
+        font-size: 17px;
         color: #000;
     }
 
     input[type="tel"] {
+        padding: 8px 0px 5px 0px;
         width: 100%;
-        padding: 25px 10px;
         border: 1px solid #ccc;
         border-radius: 5px;
-        font-size: 16px;
+        font-size: 17px;
         color: #000;
-        margin: 2px 0px;
+        margin: 7px 0px;
     }
 
     .phone-input .custom-select select {
         display: none !important;
     }
-
 
     .phone-input img {
         width: 24px;
@@ -1047,39 +1047,39 @@ input[type="text"]:focus {
     }
 
     .phone-input select {
+        background: none;
         border: none;
         outline: none;
         font-size: 16px;
-        padding: 10px 0;
         color: #000;
-        background: none;
     }
 
     .phone-input select option {
         color: #000;
-        font-size: 14px;
     }
 
     .phone-input input {
-        font-size: 16px;
         border: none;
         outline: none;
         flex: 1;
-        padding: 10px;
     }
 
     form .submit-button {
         font-weight: 700;
-        border-radius: 10px;
+        margin-top: 20px;
+        margin-bottom: 40px;
         width: 100%;
-        padding: 20px 0px;
+        padding: 10px 0px;
         background: linear-gradient(90deg, #3757ad 0%, #517ef6 53.85%, #3757ad 100%);
         color: white;
         border: none;
-        font-size: 16px;
+        border-radius: 5px;
+        font-size: 28px;
         cursor: pointer;
-        margin-top: 30px;
-        margin-bottom: 25px;
+    }
+
+    form button:hover {
+        cursor: pointer;
     }
 }
 
@@ -1350,8 +1350,10 @@ input[type="text"]:focus {
         border-radius: 10px;
         background-color: #fff;
         width: 600px;
-        box-shadow: 0px 100px 100px 800px #000000d1;
+        box-shadow: 0px 100px 100px 3100px #000000d1;
     }
+
+    
 
     .f-button {
         z-index: 100;
@@ -1411,11 +1413,11 @@ input[type="text"]:focus {
     }
 
     input[type="tel"] {
+        padding: 8px 0px 5px 0px;
         width: 100%;
-        padding: 15px 5px !important;
         border: 1px solid #ccc;
         border-radius: 5px;
-        font-size: 16px;
+        font-size: 17px;
         color: #000;
         margin: 7px 0px;
     }
@@ -1435,7 +1437,6 @@ input[type="text"]:focus {
         border: none;
         outline: none;
         font-size: 16px;
-        padding: 10px 0;
         color: #000;
     }
 
@@ -1447,7 +1448,6 @@ input[type="text"]:focus {
         border: none;
         outline: none;
         flex: 1;
-        padding: 10px;
     }
 
     form .submit-button {

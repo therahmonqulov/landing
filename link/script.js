@@ -47,7 +47,7 @@ function initializeAllCustomSelects() {
 
                 const flagCode = option.getAttribute('data-flag');
                 const code = option.getAttribute('data-code');
-                const maxlength = option.getAttribute('data-maxlength'); // belgilar soni (bo'shliqlar bilan)
+                const maxlength = option.getAttribute('data-maxlength');
                 const country = option.getAttribute('data-value');
 
                 selectedText.innerHTML = `
@@ -59,10 +59,12 @@ function initializeAllCustomSelects() {
                 const phoneInput = document.getElementById('phone');
                 if (phoneInput) {
                     phoneInput.maxLength = maxlength;
-                    phoneInput.value = '';
-                    phoneInput.dataset.country = country; // formatlash uchun saqlaymiz
+                    phoneInput.value = ''; // faqat tozalaymiz
+                    phoneInput.dataset.country = country;
                     updatePhonePlaceholder(country);
-                    validatePhone(); // agar allaqachon yozilgan bo'lsa, tozalaydi
+
+                    // Muhim: validatePhone() chaqirilmaydi!
+                    // Chunki validatsiya faqat submitda bo'lishi kerak
                 }
 
                 selectItems.classList.remove('select-show');
@@ -87,18 +89,18 @@ function updatePhonePlaceholder(country) {
     let placeholder = '';
 
     switch (country) {
-        case 'UZ':  placeholder = '99 999 99 99'; break;
+        case 'UZ': placeholder = '99 999 99 99'; break;
         case 'KRZ': placeholder = '999 999 999'; break;
         case 'TJK': placeholder = '999 999 999'; break;
-        case 'TK':  placeholder = '99 999 999'; break;
-        case 'KZ':  
-        case 'RU':  placeholder = '999 999 9999'; break;
-        case 'US':  placeholder = '999 999 9999'; break;
-        case 'GER': placeholder = '999 99999999'; break;
+        case 'TK': placeholder = '99 999 999'; break;
+        case 'KZ':
+        case 'RU':
+        case 'US':
         case 'TUR': placeholder = '999 999 9999'; break;
-        case 'BEL': placeholder = '99 999 9999'; break;
+        case 'GER': placeholder = '999 99999999'; break;
+        case 'BEL':
         case 'UKI': placeholder = '99 999 9999'; break;
-        default:    placeholder = 'Telefon raqam';
+        default: placeholder = 'Telefon raqam';
     }
 
     phoneInput.placeholder = placeholder;
@@ -108,28 +110,28 @@ function updatePhonePlaceholder(country) {
 const phoneInput = document.getElementById('phone');
 
 phoneInput.addEventListener('input', function (e) {
-    let value = e.target.value.replace(/\D/g, ''); // faqat raqamlar
+    let value = e.target.value.replace(/\D/g, '');
     const country = phoneInput.dataset.country || 'UZ';
     let formatted = '';
 
     switch (country) {
         case 'UZ':
-            if (value.length > 7) formatted = `${value.slice(0,2)} ${value.slice(2,5)} ${value.slice(5,7)} ${value.slice(7,9)}`;
-            else if (value.length > 5) formatted = `${value.slice(0,2)} ${value.slice(2,5)} ${value.slice(5)}`;
-            else if (value.length > 2) formatted = `${value.slice(0,2)} ${value.slice(2)}`;
+            if (value.length > 7) formatted = `${value.slice(0, 2)} ${value.slice(2, 5)} ${value.slice(5, 7)} ${value.slice(7, 9)}`;
+            else if (value.length > 5) formatted = `${value.slice(0, 2)} ${value.slice(2, 5)} ${value.slice(5)}`;
+            else if (value.length > 2) formatted = `${value.slice(0, 2)} ${value.slice(2)}`;
             else formatted = value;
             break;
 
         case 'KRZ':
         case 'TJK':
-            if (value.length > 6) formatted = `${value.slice(0,3)} ${value.slice(3,6)} ${value.slice(6,9)}`;
-            else if (value.length > 3) formatted = `${value.slice(0,3)} ${value.slice(3)}`;
+            if (value.length > 6) formatted = `${value.slice(0, 3)} ${value.slice(3, 6)} ${value.slice(6, 9)}`;
+            else if (value.length > 3) formatted = `${value.slice(0, 3)} ${value.slice(3)}`;
             else formatted = value;
             break;
 
         case 'TK':
-            if (value.length > 5) formatted = `${value.slice(0,2)} ${value.slice(2,5)} ${value.slice(5,8)}`;
-            else if (value.length > 2) formatted = `${value.slice(0,2)} ${value.slice(2)}`;
+            if (value.length > 5) formatted = `${value.slice(0, 2)} ${value.slice(2, 5)} ${value.slice(5, 8)}`;
+            else if (value.length > 2) formatted = `${value.slice(0, 2)} ${value.slice(2)}`;
             else formatted = value;
             break;
 
@@ -137,22 +139,22 @@ phoneInput.addEventListener('input', function (e) {
         case 'RU':
         case 'US':
         case 'TUR':
-            if (value.length > 6) formatted = `${value.slice(0,3)} ${value.slice(3,6)} ${value.slice(6,10)}`;
-            else if (value.length > 3) formatted = `${value.slice(0,3)} ${value.slice(3)}`;
+            if (value.length > 6) formatted = `${value.slice(0, 3)} ${value.slice(3, 6)} ${value.slice(6, 10)}`;
+            else if (value.length > 3) formatted = `${value.slice(0, 3)} ${value.slice(3)}`;
             else formatted = value;
             break;
 
         case 'GER':
-            if (value.length > 8) formatted = `${value.slice(0,3)} ${value.slice(3,11)}`;
-            else if (value.length > 3) formatted = `${value.slice(0,3)} ${value.slice(3)}`;
+            if (value.length > 8) formatted = `${value.slice(0, 3)} ${value.slice(3, 11)}`;
+            else if (value.length > 3) formatted = `${value.slice(0, 3)} ${value.slice(3)}`;
             else formatted = value;
             break;
 
         case 'BEL':
         case 'UKI':
-            if (value.length > 7) formatted = `${value.slice(0,2)} ${value.slice(2,5)} ${value.slice(5,9)}`;
-            else if (value.length > 5) formatted = `${value.slice(0,2)} ${value.slice(2,5)} ${value.slice(5)}`;
-            else if (value.length > 2) formatted = `${value.slice(0,2)} ${value.slice(2)}`;
+            if (value.length > 7) formatted = `${value.slice(0, 2)} ${value.slice(2, 5)} ${value.slice(5, 9)}`;
+            else if (value.length > 5) formatted = `${value.slice(0, 2)} ${value.slice(2, 5)} ${value.slice(5)}`;
+            else if (value.length > 2) formatted = `${value.slice(0, 2)} ${value.slice(2)}`;
             else formatted = value;
             break;
 
@@ -166,10 +168,10 @@ phoneInput.addEventListener('input', function (e) {
 // Form elementlari
 const submitForm = document.forms['contact-form'];
 const inputName = document.getElementById('name');
+const inputPhone = document.getElementById('phone');
 const warningP = document.querySelector('.warning-p');
-const inputPhone = document.getElementById("phone")
 
-// Ism uchun dinamik xato xabari (HTMLda yo'q edi, shuning uchun yaratamiz)
+// Ism uchun xato xabari (HTMLda yo'q edi)
 const nameError = document.createElement('p');
 nameError.style.color = 'red';
 nameError.style.fontSize = '14px';
@@ -177,10 +179,10 @@ nameError.style.marginTop = '5px';
 nameError.style.display = 'none';
 inputName.parentNode.insertBefore(nameError, inputName.nextSibling);
 
-// Validatsiya funksiyalari (faqat submitda ishlaydi)
+// Validatsiya funksiyalari — faqat submitda ishlaydi
 function validateName() {
     const nameValue = inputName.value.trim();
-    const nameRegex = /^[A-Za-zÀ-ÿ\s'-]{2,}$/; // harflar, bo'shliq, apostrof
+    const nameRegex = /^[A-Za-zÀ-ÿ\s'-]{2,}$/;
 
     if (nameValue === '' || !nameRegex.test(nameValue)) {
         nameError.textContent = "❌ Ismingizni to‘g‘ri kiriting!";
@@ -211,11 +213,10 @@ function validatePhone() {
     }
 }
 
-// Form submit (faqat shu yerda validatsiya)
+// Form submit — bu yerda validatsiya ishlaydi
 submitForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    // Faqat submit bosilganda tekshirish
     const isNameValid = validateName();
     const isPhoneValid = validatePhone();
 
@@ -227,7 +228,9 @@ submitForm.addEventListener('submit', async (e) => {
     const phone = inputPhone.value.trim();
 
     try {
-        // Bu yerda scriptURL aniqlangan bo'lishi kerak (Google Apps Script URL)
+        // scriptURL ni quyida aniqlang
+        const scriptURL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec'; // O'ZGARTIRING!!!
+
         await fetch(scriptURL, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -235,17 +238,12 @@ submitForm.addEventListener('submit', async (e) => {
             mode: 'no-cors'
         });
 
-        // Muvaffaqiyatli bo'lsa formni yopamiz
         form.style.display = 'none';
         body.style.overflow = 'auto';
-
-        // Agar thank-you sahifa bo'lsa:
-        // window.location.href = "thank-you.html";
-
-        alert("Muvaffaqiyatli ro'yxatdan o'tdingiz!");
+        alert("Salom dunyo");
 
     } catch (error) {
         console.error("Xatolik:", error);
-        alert("Ma'lumot yuborishda xatolik. Iltimos, qayta urinib ko‘ring.");
+        alert("xato ketdi");
     }
 });
