@@ -231,14 +231,13 @@ input[type="text"]:focus {
 }
 
 /* mob */
-@media screen and (min-width:0px) and (max-width: 760px) {
+@media screen and (min-width: 275px) and (max-width: 760px) {
 
     .frist_text_text_p1 {
         width: 90%;
         margin: auto;
         margin-bottom: 20px;
         text-align: center;
-        font-size: clamp(17px, 5.4vw, 72px);
     }
 
     /* form */
@@ -255,10 +254,6 @@ input[type="text"]:focus {
     }
 
     .frist_img {
-        display: none;
-    }
-
-    .frist_text_text_p2 br {
         display: none;
     }
 
@@ -569,6 +564,10 @@ input[type="text"]:focus {
 }
 
 @media screen and (min-width:760px) and (max-width: 1100px) {
+
+    .frist_text_text_p1 {
+        text-align: center;
+    }
 
     .frist_back {
         position: relative;
