@@ -237,15 +237,6 @@ submitForm.addEventListener('submit', async (e) => {
     const phone = inputPhone.value.trim();
 
     try {
-        // scriptURL ni quyida aniqlang
-
-        await fetch(scriptURL, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name, phone }),
-            mode: 'no-cors'
-        });
-
         form.style.display = 'none';
         // body.style.overflow = 'auto';
         alert("Salom dunyo");
