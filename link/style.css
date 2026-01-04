@@ -139,7 +139,7 @@ input[type="text"]:focus {
     border-top: none;
     border-radius: 0 0 5px 5px;
     max-height: 200px;
-    /* overflow-y: auto; */
+    overflow-y: auto;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     z-index: 1000;
     display: none;
