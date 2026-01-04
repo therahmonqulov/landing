@@ -17,6 +17,116 @@ const hideButton = document.querySelector('.f-button').addEventListener('click',
     form.style.display = 'none';
 });
 
+function initCustomSelect() {
+    const customSelect = document.querySelector('.custom-select');
+    const selectSelected = customSelect.querySelector('.select-selected');
+    const selectItems = customSelect.querySelector('.select-items');
+    const selectedText = selectSelected.querySelector('.selected-text');
+    const flagImg = document.getElementById('flag');
+    const options = selectItems.querySelectorAll('.select-option');
+
+    // Ochish/yopish
+    selectSelected.addEventListener('click', (e) => {
+        e.stopPropagation();
+        selectItems.classList.toggle('select-show');
+        selectSelected.classList.toggle('active'); // Bu klass strelkani aylantiradi
+    });
+
+    // Dropdown ni yopish
+    selectItems.classList.remove('select-show');
+    selectSelected.classList.remove('active'); // ← bu muhim!
+
+    document.addEventListener('click', () => {
+        selectItems.classList.remove('select-show');
+        selectSelected.classList.remove('active');
+    });
+    // Option tanlash
+    options.forEach(option => {
+        option.addEventListener('click', (e) => {
+            e.stopPropagation();
+
+            // Oldingi selected ni o'chirish
+            selectItems.querySelector('.selected')?.classList.remove('selected');
+            option.classList.add('selected');
+
+            // Yangi qiymatlarni olish
+            const flagCode = option.getAttribute('data-flag');
+            const code = option.getAttribute('data-code');
+            const maxlength = option.getAttribute('data-maxlength');
+            const value = option.getAttribute('data-value');
+
+            // Bayroqni yangilash
+            flagImg.src = `./media/flags/${flagCode}.png`;
+
+            // Matnni yangilash (bayroq + kod)
+            selectedText.innerHTML = `<img id="flag" src="./media/flags/${flagCode}.png" alt="Bayroq"><span class="arrow-down"><i class="fa-solid fa-angle-down"></i></span> ${code}`;
+
+            // Telefon input maxlength va placeholder/pattern
+            const phoneInput = document.getElementById('phone');
+            phoneInput.maxLength = maxlength;
+            phoneInput.value = '';
+            updatePhonePlaceholderAndPattern(value);
+
+            // Dropdown ni yopish
+            selectItems.classList.remove('select-show');
+            selectSelected.classList.remove('active');
+        });
+    });
+
+    // Tashqarida click qilganda yopish
+    document.addEventListener('click', () => {
+        selectItems.classList.remove('select-show');
+        selectSelected.classList.remove('active');
+    });
+}
+
+// Telefon placeholder va pattern ni yangilash (eski logikani saqlab)
+function updatePhonePlaceholderAndPattern(country) {
+    const phoneInput = document.getElementById('phone');
+    let placeholder = '';
+    let pattern = '';
+
+    switch (country) {
+        case 'UZ':
+            placeholder = '99-999-99-99';
+            pattern = '\\d{2}-\\d{3}-\\d{2}-\\d{2}';
+            break;
+        case 'KRZ':
+        case 'TJK':
+            placeholder = '999-999-999';
+            pattern = '\\d{3}-\\d{3}-\\d{3}';
+            break;
+        case 'TK':
+            placeholder = '99-999-999';
+            pattern = '\\d{2}-\\d{3}-\\d{3}';
+            break;
+        case 'KZ':
+        case 'RU':
+        case 'US':
+            placeholder = '999-999-9999';
+            pattern = '\\d{3}-\\d{3}-\\d{4}';
+            break;
+        case 'GER':
+            placeholder = '999-99999999';
+            pattern = '\\d{3}-\\d{8}';
+            break;
+        case 'TUR':
+            placeholder = '999-999-9999';
+            pattern = '\\d{3}-\\d{3}-\\d{4}';
+            break;
+        case 'BEL':
+        case 'UKI':
+            placeholder = '99-999-9999';
+            pattern = '\\d{2}-\\d{3}-\\d{4}';
+            break;
+    }
+
+    phoneInput.placeholder = placeholder;
+    phoneInput.pattern = pattern;
+}
+
+// Yangi custom select ni ishga tushirish
+initCustomSelect();
 
 //phone number validation (telefon raqamni tekshirish)
 const phoneInput = document.getElementById("phone");
@@ -33,168 +143,6 @@ phoneInput.addEventListener("input", function (e) {
 
     e.target.value = value;
 });
-
-//(telefon raqami orasiga "-" qo'shish)
-function updatePhoneInput() {
-    const countrySelect = document.getElementById('country');
-    const phoneInput = document.getElementById('phone');
-    const flagImg = document.getElementById('flag');
-
-    function updateInputFields() {
-        let selectedCountry = countrySelect.value;
-        let placeholder = '';
-        let pattern = '';
-        let flag = '';
-        let maxLength = '';
-        let width = '';
-
-        switch (selectedCountry) {
-            case 'UZ':
-                flag = 'https://flagcdn.com/w40/uz.png';
-                placeholder = '99-999-99-99';
-                pattern = '\\d{2}-\\d{3}-\\d{2}-\\d{2}';
-                maxLength = '12';
-                width = '70px';
-                break;
-            case 'KRZ':
-            case 'TJK':
-                flag = selectedCountry === 'KRZ'
-                    ? 'https://flagcdn.com/w40/kg.png'
-                    : 'https://flagcdn.com/w40/tj.png';
-                placeholder = '999-999-999';
-                pattern = '\\d{3}-\\d{3}-\\d{3}';
-                maxLength = '11';
-                width = '70px';
-                break;
-            case 'TK':
-                flag = 'https://flagcdn.com/w40/tm.png';
-                placeholder = '99-999-999';
-                pattern = '\\d{2}-\\d{3}-\\d{3}';
-                maxLength = '10';
-                width = '70px';
-                break;
-            case 'KZ':
-            case 'RU':
-            case 'US':
-                flag = selectedCountry === 'KZ'
-                    ? 'https://flagcdn.com/w40/kz.png'
-                    : selectedCountry === 'RU'
-                        ? 'https://flagcdn.com/w40/ru.png'
-                        : 'https://flagcdn.com/w40/us.png';
-                placeholder = '999-999-9999';
-                pattern = '\\d{3}-\\d{3}-\\d{4}';
-                maxLength = '12';
-                width = '50px';
-                break;
-            case 'GER':
-                flag = 'https://flagcdn.com/w40/de.png';
-                placeholder = '999-99999999';
-                pattern = '\\d{3}-\\d{8}';
-                maxLength = '12';
-                width = '60px';
-                break;
-            case 'TUR':
-                flag = 'https://flagcdn.com/w40/tr.png';
-                placeholder = '999-999-9999';
-                pattern = '\\d{3}-\\d{3}-\\d{4}';
-                maxLength = '12';
-                width = '60px';
-                break;
-            case 'BEL':
-            case 'UKI':
-                flag = selectedCountry === 'BEL'
-                    ? 'https://flagcdn.com/w40/by.png'
-                    : 'https://flagcdn.com/w40/ua.png';
-                placeholder = '99-999-9999';
-                pattern = '\\d{2}-\\d{3}-\\d{4}';
-                maxLength = '11';
-                width = '70px';
-                break;
-            default:
-                flag = '';
-                placeholder = '';
-                pattern = '';
-                maxLength = '';
-                width = '50px';
-        }
-
-        phoneInput.placeholder = placeholder;
-        phoneInput.pattern = pattern;
-        phoneInput.maxLength = maxLength;
-        phoneInput.value = '';
-        flagImg.src = flag;
-        countrySelect.style.width = width; // Width qo'shildi
-    }
-
-    function formatPhoneNumber(event) {
-        let rawValue = phoneInput.value.replace(/\D/g, '');
-        let selectedCountry = countrySelect.value;
-        let formattedValue = '';
-        let cursorPosition = phoneInput.selectionStart;
-
-        switch (selectedCountry) {
-            case 'UZ':
-                formattedValue = rawValue.replace(/(\d{0,2})(\d{0,3})(\d{0,2})(\d{0,2})/, (_, a, b, c, d) =>
-                    [a, b, c, d].filter(Boolean).join('-'));
-                break;
-            case 'KRZ':
-            case 'TJK':
-                formattedValue = rawValue.replace(/(\d{0,3})(\d{0,3})(\d{0,3})/, (_, a, b, c) =>
-                    [a, b, c].filter(Boolean).join('-'));
-                break;
-            case 'TK':
-                formattedValue = rawValue.replace(/(\d{0,2})(\d{0,3})(\d{0,3})/, (_, a, b, c) =>
-                    [a, b, c].filter(Boolean).join('-'));
-                break;
-            case 'KZ':
-            case 'RU':
-            case 'US':
-                formattedValue = rawValue.replace(/(\d{0,3})(\d{0,3})(\d{0,4})/, (_, a, b, c) =>
-                    [a, b, c].filter(Boolean).join('-'));
-                break;
-            case 'GER':
-                formattedValue = rawValue.replace(/(\d{0,3})(\d{0,8})/, (_, a, b) =>
-                    [a, b].filter(Boolean).join('-'));
-                break;
-            case 'TUR':
-                formattedValue = rawValue.replace(/(\d{0,3})(\d{0,3})(\d{0,4})/, (_, a, b, c) =>
-                    [a, b, c].filter(Boolean).join('-'));
-                break;
-            case 'BEL':
-            case 'UKI':
-                formattedValue = rawValue.replace(/(\d{0,2})(\d{0,3})(\d{0,4})/, (_, a, b, c) =>
-                    [a, b, c].filter(Boolean).join('-'));
-                break;
-        }
-
-        phoneInput.value = formattedValue;
-
-        // Kursorni formatlashdan keyin to'g'ri joyga qaytarish
-        let diff = formattedValue.length - rawValue.length;
-        phoneInput.setSelectionRange(cursorPosition + diff, cursorPosition + diff);
-    }
-
-    countrySelect.addEventListener('change', updateInputFields);
-    phoneInput.addEventListener('input', formatPhoneNumber);
-    updateInputFields();
-}
-updatePhoneInput();
-
-// form country select (bayroqlar)
-function updateFlag() {
-    const select = document.getElementById('country');
-    const phoneInput = document.getElementById('phone');
-    const flagImg = document.getElementById('flag');
-    const selectedOption = select.options[select.selectedIndex];
-    const maxLength = selectedOption.getAttribute('data-maxlength');
-    const countryCode = selectedOption.value.toLowerCase();
-
-    // Bayroq rasmini yangilash
-    flagImg.src = `https://flagcdn.com/w40/${countryCode}.png`;
-    // Telefon raqami uzunligini yangilash
-    phoneInput.setAttribute('maxlength', maxLength);
-}
-updateFlag();
 
 const submitForm = document.forms['contact-form'];
 const hideForm = document.querySelector('.hide-form-div');
