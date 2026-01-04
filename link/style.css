@@ -237,6 +237,8 @@ input[type="text"]:focus {
         width: 90%;
         margin: auto;
         margin-bottom: 20px;
+        text-align: center;
+        font-size: clamp(17px, 5.4vw, 72px);
     }
 
     /* form */
@@ -248,7 +250,7 @@ input[type="text"]:focus {
         background: white;
         border: 1px solid #ccc;
         max-height: 200px;
-        /* overflow-y: auto;     */
+        overflow-y: auto;    
         z-index: 1000;
     }
 
