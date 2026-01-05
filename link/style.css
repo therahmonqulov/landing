@@ -289,7 +289,6 @@ input[type="text"]:focus {
     .second_text p {
         color: #fff;
         font-weight: 700;
-        font-size: clamp(26px, 4.6vw, 72px);
         text-align: center;
     }
 
@@ -301,13 +300,9 @@ input[type="text"]:focus {
     }
 
     .second_boxes {
-        border-radius: clamp(18px, 3vw, 35px);
         position: relative;
         display: flex;
         align-items: center;
-        padding-left: clamp(28px, 9vw, 40px);
-        padding-top: clamp(10px, 9vw, 20px);
-        padding-bottom: clamp(10px, 9vw, 20px);
         border: 1px solid #fff;
         background-color: #01143F;
     }
@@ -326,10 +321,6 @@ input[type="text"]:focus {
         background-color: #FFC1B0;
         color: #000;
         font-weight: 600;
-    }
-
-    .second_boxes {
-        font-size: clamp(14px, 4vw, 80px);
     }
 
     .second_boxes p {
@@ -351,22 +342,13 @@ input[type="text"]:focus {
         background-color: #FFC1B0;
         color: #000;
         font-weight: 700;
-        font-size: clamp(25px, 5vw, 80px);
-    }
-
-    .second_box_num_mob {
-        font-size: clamp(25px, 5vw, 80px);
     }
 
     .second_box_last_box {
         width: 100%;
-        border-radius: clamp(18px, 3vw, 35px);
         position: relative;
         display: flex;
         align-items: center;
-        padding-left: clamp(28px, 9vw, 40px);
-        padding-top: clamp(10px, 9vw, 20px);
-        padding-bottom: clamp(10px, 9vw, 20px);
         border: 1px solid #fff;
         background-color: #01143F;
         margin-top: 20px;
