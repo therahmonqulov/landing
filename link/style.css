@@ -249,7 +249,7 @@ input[type="text"]:focus {
         background: white;
         border: 1px solid #ccc;
         max-height: 200px;
-        overflow-y: auto;    
+        overflow-y: auto;
         z-index: 1000;
     }
 
@@ -285,8 +285,13 @@ input[type="text"]:focus {
         background-image: url(../media/sec-back.avif);
         padding: 30px;
     }
+    
+    .second {
+        min-height: 680px;
+    }
 
     .second_text p {
+        line-height: 1.1;
         color: #fff;
         font-weight: 700;
         font-size: clamp(26px, 4.6vw, 72px);
@@ -592,7 +597,7 @@ input[type="text"]:focus {
         display: flex;
         justify-content: center;
     }
-    
+
 
     .frist_text_button_butt {
         display: flex;
