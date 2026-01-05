@@ -284,6 +284,13 @@ input[type="text"]:focus {
         background-size: cover;
         background-image: url(../media/sec-back.avif);
         padding: 30px;
+        
+        /* <<< YANGI: CLS ni keskin kamaytirish uchun qo'shilgan >>> */
+        min-height: 650px; /* Mobil ekranlarda yetarli joy ajratadi, o'zgartirib sinab ko'ring */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box;
     }
 
     .second_text p {
@@ -310,6 +317,10 @@ input[type="text"]:focus {
         padding-bottom: clamp(10px, 9vw, 20px);
         border: 1px solid #fff;
         background-color: #01143F;
+        
+        /* <<< YANGI: Matn o'zgarsa ham balandlik saqlanishi uchun >>> */
+        min-height: 90px;
+        box-sizing: border-box;
     }
 
     .second_box_num {
@@ -326,6 +337,12 @@ input[type="text"]:focus {
         background-color: #FFC1B0;
         color: #000;
         font-weight: 600;
+        
+        /* <<< YANGI: Vertikal markazlash – shiftni oldini oladi >>> */
+        top: 50%;
+        transform: translateY(-50%);
+        
+        font-size: clamp(25px, 5vw, 80px);
     }
 
     .second_boxes {
@@ -334,6 +351,8 @@ input[type="text"]:focus {
 
     .second_boxes p {
         color: #fff;
+        margin: 0;
+        line-height: 1.4; /* <<< YANGI: O'qish qulayligi va barqarorlik uchun >>> */
     }
 
     .second_box_last {
@@ -352,10 +371,10 @@ input[type="text"]:focus {
         color: #000;
         font-weight: 700;
         font-size: clamp(25px, 5vw, 80px);
-    }
-
-    .second_box_num_mob {
-        font-size: clamp(25px, 5vw, 80px);
+        
+        /* <<< YANGI: Vertikal markazlash >>> */
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     .second_box_last_box {
@@ -370,10 +389,16 @@ input[type="text"]:focus {
         border: 1px solid #fff;
         background-color: #01143F;
         margin-top: 20px;
+        
+        /* <<< YANGI: Balandlik barqarorligi uchun >>> */
+        min-height: 90px;
+        box-sizing: border-box;
     }
 
     .second_box_last_box p {
         color: #fff;
+        margin: 0;
+        line-height: 1.4;
     }
 
     .second_box_last_box {
