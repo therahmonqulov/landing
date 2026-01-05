@@ -274,28 +274,27 @@ input[type="text"]:focus {
         color: #fff;
         line-height: 1.1;
         font-weight: 500;
-        font-size: clamp(12px, 3vw, 60px);
+        font-size: clamp(12px, 3vw, 20px);
     }
 
-    /* second */
+    /* ================= SECOND (CLS FIX) ================= */
+
     .second {
-        padding: 25px !important;
+        padding: 30px;
         background-position: center;
         background-size: cover;
         background-image: url(../media/sec-back.avif);
-        padding: 30px;
-    }
-    
-    .second {
-        min-height: 680px;
+        min-height: 720px;        /* CLS fix */
+        overflow: hidden;         /* CLS fix */
     }
 
     .second_text p {
-        line-height: 1.1;
+        line-height: 1.15;
         color: #fff;
         font-weight: 700;
-        font-size: clamp(26px, 4.6vw, 72px);
+        font-size: clamp(26px, 4.6vw, 42px); /* clamp qisqartirildi */
         text-align: center;
+        min-height: 60px;        /* CLS fix */
     }
 
     .second_box {
@@ -306,15 +305,22 @@ input[type="text"]:focus {
     }
 
     .second_boxes {
-        border-radius: clamp(18px, 3vw, 35px);
+        border-radius: clamp(18px, 3vw, 30px);
         position: relative;
         display: flex;
         align-items: center;
-        padding-left: clamp(28px, 9vw, 40px);
+        padding-left: 60px;       /* absolute element uchun joy */
         padding-top: clamp(10px, 9vw, 20px);
         padding-bottom: clamp(10px, 9vw, 20px);
         border: 1px solid #fff;
         background-color: #01143F;
+        font-size: clamp(14px, 4vw, 22px); /* clamp qisqartirildi */
+        min-height: 70px;         /* CLS fix */
+    }
+
+    .second_boxes p {
+        color: #fff;
+        line-height: 1.3;
     }
 
     .second_box_num {
@@ -324,21 +330,14 @@ input[type="text"]:focus {
     .second_box_num_mob {
         font-family: Arial, Helvetica, sans-serif;
         position: absolute;
-        left: -20px;
+        left: 10px;
         padding: 5px 10px;
         border: 1px solid #fff;
         border-radius: 10px;
         background-color: #FFC1B0;
         color: #000;
         font-weight: 600;
-    }
-
-    .second_boxes {
-        font-size: clamp(14px, 4vw, 80px);
-    }
-
-    .second_boxes p {
-        color: #fff;
+        font-size: clamp(18px, 4vw, 26px);
     }
 
     .second_box_last {
@@ -346,47 +345,29 @@ input[type="text"]:focus {
         justify-content: center;
     }
 
-    .second_box_last_num {
-        position: absolute;
-        left: -20px;
-        font-family: Arial, Helvetica, sans-serif;
-        padding: 5px 10px;
-        border: 1px solid #fff;
-        border-radius: 10px;
-        background-color: #FFC1B0;
-        color: #000;
-        font-weight: 700;
-        font-size: clamp(25px, 5vw, 80px);
-    }
-
-    .second_box_num_mob {
-        font-size: clamp(25px, 5vw, 80px);
-    }
-
     .second_box_last_box {
         width: 100%;
-        border-radius: clamp(18px, 3vw, 35px);
+        border-radius: clamp(18px, 3vw, 30px);
         position: relative;
         display: flex;
         align-items: center;
-        padding-left: clamp(28px, 9vw, 40px);
+        padding-left: 60px;
         padding-top: clamp(10px, 9vw, 20px);
         padding-bottom: clamp(10px, 9vw, 20px);
         border: 1px solid #fff;
         background-color: #01143F;
         margin-top: 20px;
+        font-size: clamp(14px, 4vw, 22px);
+        min-height: 70px;         /* CLS fix */
     }
 
     .second_box_last_box p {
         color: #fff;
+        line-height: 1.3;
     }
 
-    .second_box_last_box {
-        font-size: clamp(14px, 4vw, 80px);
-        position: relative;
-    }
+    /* ================= THIRD ================= */
 
-    /* third */
     .third {
         padding: 80px 0px;
         background-position: center;
@@ -412,16 +393,14 @@ input[type="text"]:focus {
     }
 
     .third_button_butt button {
-        padding: 10px;
+        padding: 15px 75px;
         letter-spacing: -1px;
-        font-size: clamp(17px, 4.6vw, 72px);
+        font-size: clamp(17px, 4.6vw, 26px);
         color: #000;
-        border-radius: 30px;
+        border-radius: 50px;
         border: 1px solid #fff;
         font-weight: 700;
         background-color: #FFC1B0;
-        border-radius: 50px;
-        padding: 15px 75px;
     }
 
     .third_button_text {
@@ -435,7 +414,8 @@ input[type="text"]:focus {
         color: #fff;
     }
 
-    /* form */
+    /* ================= FORM ================= */
+
     .form-container {
         width: 90%;
         margin: auto;
@@ -444,129 +424,17 @@ input[type="text"]:focus {
     .form {
         display: none;
         position: fixed;
-        top: 0%;
+        top: 0;
         right: 50%;
-        transform: translate(50%, 0%);
+        transform: translate(50%, 0);
         background-color: #fff;
         height: 100vh;
         width: 100vw;
         z-index: 1;
-        box-shadow: 0px 0px 10px 1000px #000000e2;
-    }
-
-    .f-button {
-        z-index: 100;
-        color: #fff;
-        outline: none;
-        border: none;
-        outline: none;
-        background: none;
-        padding: 0px 15px;
-        text-align: right;
-        background-color: #000;
-        width: 100%;
-        height: 40px;
-        display: flex;
-        justify-content: right;
-        align-items: center;
-    }
-
-    .f-button i {
-        font-size: 13px;
-        color: #fff;
-    }
-
-    .form-h1 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .form-h1 h1 {
-        text-align: center;
-        font-size: 22px;
-        color: #000;
-        margin-top: 20px;
-    }
-
-    .form-group {
-        margin-bottom: 25px;
-        text-align: left;
-    }
-
-    .form label {
-        display: block;
-        font-size: 16px;
-        color: #000;
-        margin-bottom: 10px;
-        margin-top: 20px;
-    }
-
-    input[type="text"] {
-        width: 100%;
-        padding: 15px 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 16px;
-        color: #000;
-    }
-
-    input[type="tel"] {
-        width: 100%;
-        padding: 25px 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 16px;
-        color: #000;
-        margin: 2px 0px;
-    }
-
-    .phone-input .custom-select select {
-        display: none !important;
-    }
-
-    .phone-input img {
-        width: 24px;
-        height: 18px;
-        margin: 0 10px;
-    }
-
-    .phone-input select {
-        border: none;
-        outline: none;
-        font-size: 16px;
-        padding: 10px 0;
-        color: #000;
-        background: none;
-    }
-
-    .phone-input select option {
-        color: #000;
-        font-size: 14px;
-    }
-
-    .phone-input input {
-        font-size: 16px;
-        border: none;
-        outline: none;
-        flex: 1;
-        padding: 10px;
-    }
-
-    form .submit-button {
-        font-weight: 700;
-        border-radius: 10px;
-        width: 100%;
-        padding: 15px 0px;
-        background: linear-gradient(90deg, #3757ad 0%, #517ef6 53.85%, #3757ad 100%);
-        color: white;
-        border: none;
-        font-size: 16px;
-        cursor: pointer;
-        margin-top: 30px;
-        margin-bottom: 25px;
+        box-shadow: 0 0 10px 1000px #000000e2;
     }
 }
+
 
 @media screen and (min-width:760px) and (max-width: 1100px) {
 
