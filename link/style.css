@@ -373,12 +373,11 @@ input[type="text"]:focus {
     }
 
     .second_box_last_box p {
-        font-size: clamp(16px, 2.4vw, 40px);
         color: #fff;
     }
 
     .second_box_last_box {
-        font-size: clamp(16px, 5vw, 80px);
+        font-size: clamp(14px, 4vw, 80px);
         position: relative;
     }
 
