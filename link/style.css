@@ -277,34 +277,13 @@ input[type="text"]:focus {
         font-size: clamp(12px, 3vw, 60px);
     }
 
-    /* second - CLS 0.383 ni butunlay hal qilish uchun KUCHLIROQ tuzatishlar */
+    /* second */
     .second {
         padding: 25px !important;
         background-position: center;
         background-size: cover;
         background-image: url(../media/sec-back.avif);
         padding: 30px;
-        
-        /* <<< YANGI + KUCHLI: Rasm yuklanishidan oldin balandlik va nisbati SAQLANADI >>> */
-        aspect-ratio: 320 / 700; /* Mobil ekran uchun taxminiy (375x667 iPhone kabi, sinab o'zgartiring: 16/9=1.777 yoki 1/2=0.5) */
-        width: 100%;
-        height: 0;
-        padding-bottom: 220%; /* aspect-ratio fallback uchun (700/320*100%) - MOBILDA sinab 200-250% qilib ko'ring */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        box-sizing: border-box;
-        min-height: 650px; /* Agar aspect ishlamasa fallback */
-        position: relative;
-    }
-
-    /* second_text ga ham min-height */
-    .second_text {
-        min-height: 120px; /* Sarlavha matni (clamp 26-72px) uchun joy */
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 
     .second_text p {
@@ -312,13 +291,6 @@ input[type="text"]:focus {
         font-weight: 700;
         font-size: clamp(26px, 4.6vw, 72px);
         text-align: center;
-        line-height: 1.2; /* <<< SHRIFT shiftni kamaytirish uchun FIXED line-height >>> */
-        margin: 0;
-        padding: 0 10px;
-        font-synthesis: none; /* Font renderingni barqarorlashtirish */
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
     }
 
     .second_box {
@@ -326,8 +298,6 @@ input[type="text"]:focus {
         grid-template-columns: repeat(1, 1fr);
         padding-top: 20px;
         gap: 20px;
-        width: 100%;
-        flex: 1; /* Joyni to'ldirish */
     }
 
     .second_boxes {
@@ -340,11 +310,6 @@ input[type="text"]:focus {
         padding-bottom: clamp(10px, 9vw, 20px);
         border: 1px solid #fff;
         background-color: #01143F;
-        
-        /* <<< KUCHLIROQ: Har doim barqaror balandlik >>> */
-        min-height: 100px;
-        height: 100px; /* Fixed height - matn uzunligi o'zgarsa ham shift yo'q */
-        box-sizing: border-box;
     }
 
     .second_box_num {
@@ -361,11 +326,6 @@ input[type="text"]:focus {
         background-color: #FFC1B0;
         color: #000;
         font-weight: 600;
-        
-        top: 50%;
-        transform: translateY(-50%);
-        
-        font-size: clamp(25px, 5vw, 80px);
     }
 
     .second_boxes {
@@ -374,13 +334,6 @@ input[type="text"]:focus {
 
     .second_boxes p {
         color: #fff;
-        margin: 0;
-        line-height: 1.3; /* FIXED - kirill matn qatorlari o'zgarmasligi uchun */
-        padding-right: 20px; /* Overflow oldini olish */
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        word-break: break-word;
     }
 
     .second_box_last {
@@ -399,9 +352,10 @@ input[type="text"]:focus {
         color: #000;
         font-weight: 700;
         font-size: clamp(25px, 5vw, 80px);
-        
-        top: 50%;
-        transform: translateY(-50%);
+    }
+
+    .second_box_num_mob {
+        font-size: clamp(25px, 5vw, 80px);
     }
 
     .second_box_last_box {
@@ -416,21 +370,10 @@ input[type="text"]:focus {
         border: 1px solid #fff;
         background-color: #01143F;
         margin-top: 20px;
-        
-        min-height: 100px;
-        height: 100px; /* FIXED height */
-        box-sizing: border-box;
     }
 
     .second_box_last_box p {
         color: #fff;
-        margin: 0;
-        line-height: 1.3;
-        padding-right: 20px;
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        word-break: break-word;
     }
 
     .second_box_last_box {
@@ -617,12 +560,6 @@ input[type="text"]:focus {
         cursor: pointer;
         margin-top: 30px;
         margin-bottom: 25px;
-    }
-
-    /* <<< YANGI: Butun .second ichidagi BARCHA <p> ga shrift shiftni oldini olish uchun >>> */
-    .second p {
-        font-feature-settings: 'kern' 1; /* Kerning barqaror */
-        contain: layout style; /* Layoutni isolate qilish - shift tarqalmasin */
     }
 }
 
